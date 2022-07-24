@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "niceteam"
-include ':app'
+include(":app")
