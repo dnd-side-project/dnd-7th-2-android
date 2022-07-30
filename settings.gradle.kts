@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "niceteam"
 include(":app")
+include(":data")
+include(":domain")
