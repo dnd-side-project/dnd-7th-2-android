@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_toolbar_56dp">56dp</dimen>
+    <dimen name="horizontal_padding_home_20dp">20dp</dimen>
+    <dimen name="vertical_padding_home_40dp">40dp</dimen>
+</resources>
