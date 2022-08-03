@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -54,6 +55,7 @@ dependencies {
     implementation(Library.AndroidX.FRAGMENT_KTX)
     androidTestImplementation(Library.AndroidX.TEST_JUNIT)
     androidTestImplementation(Library.AndroidX.ESPRESSO)
+
     testImplementation(Library.Junit.JUNIT)
 
     implementation(Library.Network.RETROFIT)
@@ -63,7 +65,7 @@ dependencies {
     implementation(Library.Network.LOGGING_INTERCEPTOR)
 
     implementation(Library.Hilt.HILT)
-    implementation(Library.Hilt.HILT_COMPILER)
+    kapt(Library.Hilt.HILT_COMPILER)
 
     implementation(Library.Glide.GLIDE)
     annotationProcessor(Library.Glide.GLIDE_COMPILER)
