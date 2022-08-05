@@ -1,7 +1,7 @@
 package com.dnd.niceteam.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.dnd.niceteam.R
 import dagger.hilt.android.AndroidEntryPoint
 
