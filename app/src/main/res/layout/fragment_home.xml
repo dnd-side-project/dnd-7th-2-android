@@ -2,6 +2,18 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+        <variable
+            name="progressTeamplAdapter"
+            type="com.dnd.niceteam.ui.home.adapter.ProgressTeamplAdapter" />
+
+        <variable
+            name="progressTeamplItemDecoration"
+            type="com.dnd.niceteam.ui.home.ProgressTeamplItemDecoration" />
+
+    </data>
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,7 +25,7 @@
             android:layout_height="wrap_content"
             android:background="@color/dark_purple"
             android:fitsSystemWindows="true"
-            app:elevation="0dp">
+            android:theme="@style/Theme.Teamgoo.AppBarOverlay">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -44,7 +56,9 @@
                     android:id="@+id/layout_home_content"
                     layout="@layout/layout_home_content"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    app:progressTeamplAdapter="@{progressTeamplAdapter}"
+                    app:progressTeamplItemDecoration="@{progressTeamplItemDecoration}" />
 
             </LinearLayout>
 

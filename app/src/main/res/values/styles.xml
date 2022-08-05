@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Text.Home.TopBanner" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="android:textSize">27sp</item>
+    <style name="TextAppearance.Teamgoo.Home.TopBanner" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">26sp</item>
     </style>
 
-    <style name="Text.Title" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="android:textSize">20sp</item>
+    <style name="TextAppearance.Teamgoo.Title" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="android:textColor">@color/title</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Button.LightGreen" parent="Widget.AppCompat.Button.Borderless">
-        <item name="android:background">@drawable/btn_light_green_15dp</item>
+    <style name="Widget.Teamgoo.Button.LightGreen" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/btn_light_green_10dp</item>
         <item name="android:minWidth">0dp</item>
         <item name="android:minHeight">0dp</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle2</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:paddingTop">9dp</item>
         <item name="android:paddingBottom">9dp</item>

@@ -1,10 +1,32 @@
 <resources>
 
-    <style name="Theme.Niceteam" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@color/white</item>
+    <style name="Base.Theme.Teamgoo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorPrimaryVariant">@color/dark_purple</item>
+        <item name="colorPrimaryDark">@color/dark_purple</item>
+        <item name="colorOnPrimary">@color/purple</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorSecondary">@color/light_green</item>
+        <item name="android:colorBackground">@color/white</item>
+    </style>
+
+    <style name="Theme.Teamgoo" parent="Base.Theme.Teamgoo" />
+
+    <style name="Theme.Teamgoo.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="shapeAppearanceSmallComponent">
+            @style/ShapeAppearance.MaterialComponents.SmallComponent
+        </item>
+    </style>
+
+    <style name="Theme.Teamgoo.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="elevation">0dp</item>
     </style>
 
 </resources>

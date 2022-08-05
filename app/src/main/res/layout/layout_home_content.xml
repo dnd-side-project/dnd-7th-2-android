@@ -3,68 +3,84 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/horizontal_padding_home_20dp"
-        android:paddingVertical="@dimen/vertical_padding_home_40dp">
+    <data>
+
+        <variable
+            name="progressTeamplAdapter"
+            type="com.dnd.niceteam.ui.home.adapter.ProgressTeamplAdapter" />
+
+        <variable
+            name="progressTeamplItemDecoration"
+            type="com.dnd.niceteam.ui.home.ProgressTeamplItemDecoration" />
+
+    </data>
+
+    <merge>
 
         <TextView
             android:id="@+id/tv_progress_teampl"
-            style="@style/Text.Title"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="@dimen/horizontal_padding_home_20dp"
+            android:layout_marginTop="@dimen/vertical_padding_home_40dp"
+            android:text="내가 진행중인 팀플"
+            android:textAppearance="@style/TextAppearance.Teamgoo.Title"
             tools:text="내가 진행중인 팀플" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_progress_teampl"
+            adapter="@{progressTeamplAdapter}"
+            itemDecoration="@{progressTeamplItemDecoration}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:clipToPadding="false"
             android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_progress_teampl" />
+            android:paddingHorizontal="@dimen/horizontal_padding_home_20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-        <TextView
-            android:id="@+id/tv_recommend_teampl"
-            style="@style/Text.Title"
-            android:layout_width="0dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="@dimen/horizontal_padding_home_20dp"
-            app:layout_constraintEnd_toStartOf="@id/tv_all_recommend_teampl"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_progress_teampl"
-            tools:text="팀플뿌셔님을 위한 추천 팀플" />
+            android:layout_marginHorizontal="@dimen/horizontal_padding_home_20dp"
+            android:layout_marginTop="@dimen/vertical_padding_home_40dp">
 
-        <TextView
-            android:id="@+id/tv_all_recommend_teampl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:textColor="@color/light_green"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@id/tv_recommend_teampl"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_progress_teampl"
-            tools:text="전체보기" />
+            <TextView
+                android:id="@+id/tv_recommend_teampl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/tv_all_recommend_teampl"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:text="팀플뿌셔님을 위한 추천 팀플"
+                android:textAppearance="@style/TextAppearance.Teamgoo.Title"
+                tools:text="팀플뿌셔님을 위한 추천 팀플" />
+
+            <TextView
+                android:id="@+id/tv_all_recommend_teampl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="전체보기"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textColor="@color/light_green"
+                tools:text="전체보기" />
+
+        </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_recommend_teampl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:paddingHorizontal="@dimen/horizontal_padding_home_20dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_recommend_teampl" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </merge>
 
 </layout>
