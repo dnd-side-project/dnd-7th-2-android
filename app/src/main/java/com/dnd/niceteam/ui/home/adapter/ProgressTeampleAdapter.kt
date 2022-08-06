@@ -5,12 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.dnd.niceteam.databinding.ItemProgressTeamplBinding
+import com.dnd.niceteam.databinding.ItemProgressTeampleBinding
 import com.dnd.niceteam.util.getScreenSize
 
 class ProgressTeampleAdapter :
     ListAdapter<Int, ProgressTeampleAdapter.ProgressTeamplViewHolder>(diffCallback) {
-    inner class ProgressTeamplViewHolder(private val binding: ItemProgressTeamplBinding) :
+    inner class ProgressTeamplViewHolder(private val binding: ItemProgressTeampleBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind() {
             with(binding) {
@@ -21,7 +21,7 @@ class ProgressTeampleAdapter :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProgressTeamplViewHolder {
         val binding =
-            ItemProgressTeamplBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemProgressTeampleBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         binding.root.layoutParams = RecyclerView.LayoutParams(
             parent.context.getScreenSize().x * 4 / 5,
             RecyclerView.LayoutParams.WRAP_CONTENT
