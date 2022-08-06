@@ -58,8 +58,8 @@
                     layout="@layout/layout_home_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:progressTeamplAdapter="@{progressTeampleAdapter}"
-                    app:progressTeamplItemDecoration="@{progressTeampleItemDecoration}" />
+                    app:progressTeampleAdapter="@{progressTeampleAdapter}"
+                    app:progressTeampleItemDecoration="@{progressTeampleItemDecoration}" />
 
             </LinearLayout>
 
