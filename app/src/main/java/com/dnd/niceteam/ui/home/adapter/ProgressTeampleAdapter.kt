@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dnd.niceteam.databinding.ItemProgressTeamplBinding
 import com.dnd.niceteam.util.getScreenSize
 
-class ProgressTeamplAdapter :
-    ListAdapter<Int, ProgressTeamplAdapter.ProgressTeamplViewHolder>(diffCallback) {
+class ProgressTeampleAdapter :
+    ListAdapter<Int, ProgressTeampleAdapter.ProgressTeamplViewHolder>(diffCallback) {
     inner class ProgressTeamplViewHolder(private val binding: ItemProgressTeamplBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind() {
