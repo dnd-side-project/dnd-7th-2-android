@@ -6,34 +6,51 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_item_progess_teampl">
+        android:background="@drawable/bg_item_progess_teample">
 
         <TextView
-            android:id="@+id/tv_teampl_name"
+            android:id="@+id/tv_teample_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:text="융합적 사고와 글쓰기"
+            android:text="프로젝트 명"
             android:textColor="#646771"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="융합적 사고와 글쓰기" />
+            tools:text="프로젝트 명" />
 
         <TextView
-            android:id="@+id/tv_teampl_info"
+            android:id="@+id/tv_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_light_green_15dp"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="10dp"
+            android:text="사이드"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="사이드" />
+
+        <TextView
+            android:id="@+id/tv_teample_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:text="#홍길동 교수님 #월수반"
+            android:text="카테고리 / 형태"
             android:textColor="#909090"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_teampl_name"
-            tools:text="#홍길동 교수님 #월수반" />
+            app:layout_constraintTop_toBottomOf="@id/tv_teample_name"
+            tools:text="카테고리 / 형태" />
 
         <TextView
             android:id="@+id/view_circle"
@@ -44,10 +61,10 @@
             android:background="@drawable/bg_circle_dark_gray"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_teampl_info" />
+            app:layout_constraintTop_toBottomOf="@id/tv_teample_info" />
 
         <TextView
-            android:id="@+id/tv_teampl_people_number"
+            android:id="@+id/tv_teample_people_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"

@@ -7,7 +7,7 @@
     </style>
 
     <style name="TextAppearance.Teamgoo.Title" parent="TextAppearance.MaterialComponents.Headline6">
-        <item name="android:textColor">@color/title</item>
+        <item name="android:textColor">@color/gray_6</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
     </style>

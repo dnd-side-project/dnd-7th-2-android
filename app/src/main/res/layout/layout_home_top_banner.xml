@@ -15,11 +15,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="7dp"
-            android:text="팀플뿌셔님\n찾는 팀플이 없다면\n팀원을 구해보세요!"
+            android:text="팀플뿌셔님!\n찾는 팀플이 없다면\n팀원을 구해보세요!"
             android:textAppearance="@style/TextAppearance.Teamgoo.Home.TopBanner"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="팀플뿌셔님\n찾는 팀플이 없다면\n팀원을 구해보세요!" />
+            tools:text="팀플뿌셔님!\n찾는 팀플이 없다면\n팀원을 구해보세요!" />
 
         <androidx.appcompat.widget.AppCompatButton
             style="@style/Widget.Teamgoo.Button.LightGreen"

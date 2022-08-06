@@ -1,14 +1,14 @@
 <resources>
 
     <style name="Base.Theme.Teamgoo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/purple</item>
-        <item name="colorPrimaryVariant">@color/dark_purple</item>
-        <item name="colorPrimaryDark">@color/dark_purple</item>
-        <item name="colorOnPrimary">@color/purple</item>
+        <item name="colorPrimary">@color/primary_purple</item>
+        <item name="colorPrimaryVariant">@color/primary_purple</item>
+        <item name="colorPrimaryDark">@color/primary_purple</item>
+        <item name="colorOnPrimary">@color/primary_purple</item>
         <item name="colorOnSurface">@color/black</item>
         <item name="colorAccent">@color/white</item>
         <item name="colorSurface">@color/white</item>
-        <item name="colorSecondary">@color/light_green</item>
+        <item name="colorSecondary">@color/primary_green</item>
         <item name="android:colorBackground">@color/white</item>
     </style>
 

@@ -6,19 +6,19 @@
     <data>
 
         <variable
-            name="progressTeamplAdapter"
-            type="com.dnd.niceteam.ui.home.adapter.ProgressTeamplAdapter" />
+            name="progressTeampleAdapter"
+            type="com.dnd.niceteam.ui.home.adapter.ProgressTeampleAdapter" />
 
         <variable
-            name="progressTeamplItemDecoration"
-            type="com.dnd.niceteam.ui.home.ProgressTeamplItemDecoration" />
+            name="progressTeampleItemDecoration"
+            type="com.dnd.niceteam.ui.home.ProgressTeampleItemDecoration" />
 
     </data>
 
     <merge>
 
         <TextView
-            android:id="@+id/tv_progress_teampl"
+            android:id="@+id/tv_progress_teample"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_padding_home_20dp"
@@ -28,9 +28,9 @@
             tools:text="내가 진행중인 팀플" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_progress_teampl"
-            adapter="@{progressTeamplAdapter}"
-            itemDecoration="@{progressTeamplItemDecoration}"
+            android:id="@+id/rv_progress_teample"
+            adapter="@{progressTeampleAdapter}"
+            itemDecoration="@{progressTeampleItemDecoration}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -46,10 +46,10 @@
             android:layout_marginTop="@dimen/vertical_padding_home_40dp">
 
             <TextView
-                android:id="@+id/tv_recommend_teampl"
+                android:id="@+id/tv_recommend_teample"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/tv_all_recommend_teampl"
+                android:layout_alignEnd="@+id/tv_all_recommend_teample"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="20dp"
@@ -58,20 +58,20 @@
                 tools:text="팀플뿌셔님을 위한 추천 팀플" />
 
             <TextView
-                android:id="@+id/tv_all_recommend_teampl"
+                android:id="@+id/tv_all_recommend_teample"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:text="전체보기"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                android:textColor="@color/light_green"
+                android:textColor="@color/primary_green"
                 tools:text="전체보기" />
 
         </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_recommend_teampl"
+            android:id="@+id/rv_recommend_teample"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
