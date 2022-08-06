@@ -17,6 +17,7 @@ object Version {
     const val RETROFIT = "2.9.0"
     const val MOSHI = "1.9.3"
     const val OKHTTP = "5.0.0-alpha.7"
+
     const val HILT = "2.42"
 
     const val GLIDE = "4.13.2"

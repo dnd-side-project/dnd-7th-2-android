@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dark_purple_bottom_radius_15dp"
+        android:paddingHorizontal="@dimen/horizontal_padding_home_20dp"
+        android:paddingVertical="@dimen/vertical_padding_home_40dp">
+
+        <TextView
+            android:id="@+id/tv_top_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="7dp"
+            android:text="팀플뿌셔님!\n찾는 팀플이 없다면\n팀원을 구해보세요!"
+            android:textAppearance="@style/TextAppearance.Teamgoo.Home.TopBanner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="팀플뿌셔님!\n찾는 팀플이 없다면\n팀원을 구해보세요!" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/Widget.Teamgoo.Button.LightGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="모집글 작성하기"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_top_banner"
+            tools:text="모집글 작성하기" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

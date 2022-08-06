@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_progess_teample">
+
+        <TextView
+            android:id="@+id/tv_teample_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="프로젝트 명"
+            android:textColor="#646771"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="프로젝트 명" />
+
+        <TextView
+            android:id="@+id/tv_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_light_green_15dp"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="10dp"
+            android:text="사이드"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="사이드" />
+
+        <TextView
+            android:id="@+id/tv_teample_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="카테고리 / 형태"
+            android:textColor="#909090"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_teample_name"
+            tools:text="카테고리 / 형태" />
+
+        <TextView
+            android:id="@+id/view_circle"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_circle_dark_gray"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_teample_info" />
+
+        <TextView
+            android:id="@+id/tv_teample_people_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="팀원 4명"
+            android:textColor="#7A7D88"
+            android:textSize="13sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/view_circle"
+            app:layout_constraintStart_toEndOf="@id/view_circle"
+            tools:text="팀원 4명" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/bg_purple_bottom_radius_15dp"
+            android:text="얼마 안 남았어요. 조금만 더 힘을 내요!"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_circle"
+            tools:text="얼마 안 남았어요. 조금만 더 힘을 내요!" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
