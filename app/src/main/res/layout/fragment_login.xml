@@ -19,9 +19,7 @@
             android:id="@+id/cl_top"
             android:layout_width="0dp"
             android:layout_height="210dp"
-            android:background="@color/primary_purple"
-            android:paddingHorizontal="@dimen/horizontal_padding_home_20dp"
-            android:paddingVertical="@dimen/vertical_padding_home_40dp"
+            android:background="@drawable/bg_dark_purple_bottom_radius_15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -30,12 +28,33 @@
                 android:id="@+id/tv_top_banner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:lineSpacingExtra="7dp"
+                android:layout_marginBottom="20dp"
                 android:text="@string/label_login_top"
                 android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/iv_logo"
+                app:layout_constraintStart_toStartOf="@id/iv_logo" />
+
+            <ImageView
+                android:id="@+id/iv_teamgoo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/teamgoo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="30dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_teamgoo_purple_logo"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:text="나만의 팀을 만나는 가장 현명한 방법" />
+                app:layout_constraintStart_toStartOf="parent" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
