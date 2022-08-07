@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">팀구</string>
+
+    <!-- AppBar -->
+    <string name="navigation_icon">navigation_icon</string>
+    <string name="navigation_action">navigation_action</string>
 </resources>
