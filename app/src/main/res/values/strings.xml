@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">팀구</string>
+    
+    <!-- bottom navigation -->
+    <string name="home">홈</string>
+    <string name="lecture">내 강의</string>
+    <string name="side">사이드</string>
+    <string name="mypage">MY</string>
 
     <!-- AppBar -->
     <string name="navigation_icon">navigation_icon</string>
