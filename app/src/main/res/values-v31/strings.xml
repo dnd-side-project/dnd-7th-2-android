@@ -1,17 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">팀구</string>
-
-    <!-- bottom navigation -->
-    <string name="home">홈</string>
-    <string name="lecture">내 강의</string>
-    <string name="side">사이드</string>
-    <string name="mypage">MY</string>
-
-    <!-- AppBar -->
-    <string name="navigation_icon">navigation_icon</string>
-    <string name="navigation_action">navigation_action</string>
-
-   <!-- Onboarding -->
+    <!-- Onboarding -->
     <string name="label_login">나만의 팀을 만나는 가장 현명한 방법</string>
     <string name="label_login_email_hint">학교 이메일을 입력해주세요.</string>
     <string name="label_login_password_hint">비밀번호를 입력해주세요.</string>
