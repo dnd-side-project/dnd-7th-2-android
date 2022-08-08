@@ -6,41 +6,41 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_dark_purple_bottom_radius_15dp"
-        android:paddingHorizontal="@dimen/horizontal_padding_home_20dp"
-        android:paddingVertical="@dimen/vertical_padding_home_40dp">
+        android:background="@color/dark_purple">
 
         <TextView
             android:id="@+id/tv_top_banner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:lineSpacingExtra="7dp"
-            android:text="팀플뿌셔님!\n찾는 팀플이 없다면\n팀원을 구해보세요!"
+            android:layout_marginStart="@dimen/horizontal_padding_home_top_banner"
+            android:layout_marginTop="52dp"
+            android:text="닉네임님과\n딱 맞는\n팀원을 구해봐요!"
             android:textAppearance="@style/TextAppearance.Teamgoo.Home.TopBanner"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="팀플뿌셔님!\n찾는 팀플이 없다면\n팀원을 구해보세요!" />
+            tools:text="닉네임님과\n딱 맞는\n팀원을 구해봐요!" />
 
         <ImageView
             android:id="@+id/iv_teamgoo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/teamgoo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            android:src="@drawable/teamgoo_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/Widget.Teamgoo.Button.LightGreen"
+            android:id="@+id/btn_write_recruitment"
+            style="@style/Widget.Teamgoo.Button.Green"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:text="모집글 작성하기"
+            android:layout_marginStart="@dimen/vertical_padding_home_item_20dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="26dp"
+            android:text="@string/label_home_write_recruitment"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_top_banner"
             tools:text="모집글 작성하기" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </layout>

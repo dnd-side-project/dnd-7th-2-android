@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -13,6 +12,13 @@
             name="progressTeampleItemDecoration"
             type="com.dnd.niceteam.ui.home.ProgressTeampleItemDecoration" />
 
+        <variable
+            name="recommendTeampleAdapter"
+            type="com.dnd.niceteam.ui.home.adapter.RecommendTeampleAdapter" />
+
+        <variable
+            name="recommendTeampleItemDecoration"
+            type="com.dnd.niceteam.ui.home.RecommendTeampleItemDecoration" />
     </data>
 
     <merge>
@@ -21,11 +27,10 @@
             android:id="@+id/tv_progress_teample"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/horizontal_padding_home_20dp"
-            android:layout_marginTop="@dimen/vertical_padding_home_40dp"
-            android:text="내가 진행중인 팀플"
-            android:textAppearance="@style/TextAppearance.Teamgoo.Title"
-            tools:text="내가 진행중인 팀플" />
+            android:layout_marginHorizontal="@dimen/horizontal_margin_home_item_16dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/label_home_process_teample"
+            android:textAppearance="@style/TextAppearance.Teamgoo.Title" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_progress_teample"
@@ -33,54 +38,32 @@
             itemDecoration="@{progressTeampleItemDecoration}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:clipToPadding="false"
             android:orientation="horizontal"
-            android:paddingHorizontal="@dimen/horizontal_padding_home_20dp"
+            android:paddingHorizontal="@dimen/horizontal_margin_home_item_16dp"
+            android:paddingVertical="16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_recommend_teample"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/horizontal_padding_home_20dp"
-            android:layout_marginTop="@dimen/vertical_padding_home_40dp">
-
-            <TextView
-                android:id="@+id/tv_recommend_teample"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/tv_all_recommend_teample"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="20dp"
-                android:text="팀플뿌셔님을 위한 추천 팀플"
-                android:textAppearance="@style/TextAppearance.Teamgoo.Title"
-                tools:text="팀플뿌셔님을 위한 추천 팀플" />
-
-            <TextView
-                android:id="@+id/tv_all_recommend_teample"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:text="전체보기"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                android:textColor="@color/primary_green"
-                tools:text="전체보기" />
-
-        </RelativeLayout>
+            android:layout_marginHorizontal="@dimen/horizontal_margin_home_item_16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/label_home_recommend_teample"
+            android:textAppearance="@style/TextAppearance.Teamgoo.Title" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_recommend_teample"
+            adapter="@{recommendTeampleAdapter}"
+            itemDecoration="@{recommendTeampleItemDecoration}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:paddingHorizontal="@dimen/horizontal_padding_home_20dp"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="@dimen/horizontal_margin_home_item_16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_recommend_teampl" />
-
     </merge>
-
 </layout>
