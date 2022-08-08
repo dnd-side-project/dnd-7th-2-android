@@ -8,11 +8,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/iv_navigation_icon"
-            android:layout_width="24dp"
+            android:layout_width="wrap_content"
             android:layout_height="24dp"
             android:layout_marginStart="16dp"
             android:contentDescription="@string/navigation_icon"
@@ -36,7 +37,18 @@
             tools:text="@string/app_name" />
 
         <ImageView
-            android:id="@+id/iv_action_icon"
+            android:id="@+id/iv_first_action"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/navigation_action"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_second_action"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <ImageView
+            android:id="@+id/iv_second_action"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="16dp"

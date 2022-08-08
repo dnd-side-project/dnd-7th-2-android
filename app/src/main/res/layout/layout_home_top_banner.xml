@@ -21,6 +21,16 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="팀플뿌셔님!\n찾는 팀플이 없다면\n팀원을 구해보세요!" />
 
+        <ImageView
+            android:id="@+id/iv_teamgoo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/teamgoo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
         <androidx.appcompat.widget.AppCompatButton
             style="@style/Widget.Teamgoo.Button.LightGreen"
             android:layout_width="wrap_content"

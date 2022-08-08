@@ -2,7 +2,8 @@
 <resources>
     <declare-styleable name="TeamGooAppBar">
         <attr name="icon_navigation" format="reference" />
-        <attr name="icon_action" format="reference" />
+        <attr name="icon_first_action" format="reference" />
+        <attr name="icon_second_action" format="reference" />
         <attr name="title" format="string" />
     </declare-styleable>
 </resources>
