@@ -6,11 +6,13 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.dnd.niceteam.databinding.ItemProgressTeampleBinding
+import com.dnd.niceteam.databinding.ItemRecommendTempleBinding
 import com.dnd.niceteam.util.getScreenSize
 
-class ProgressTeampleAdapter :
-    ListAdapter<Int, ProgressTeampleAdapter.ProgressTeamplViewHolder>(diffCallback) {
-    inner class ProgressTeamplViewHolder(private val binding: ItemProgressTeampleBinding) :
+class RecommendTeampleAdapter :
+    ListAdapter<Int, RecommendTeampleAdapter.RecommendTeampleViewHolder>(diffCallback) {
+
+    inner class RecommendTeampleViewHolder(private val binding: ItemRecommendTempleBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind() {
             with(binding) {
@@ -19,13 +21,13 @@ class ProgressTeampleAdapter :
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProgressTeamplViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecommendTeampleViewHolder {
         val binding =
-            ItemProgressTeampleBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ProgressTeamplViewHolder(binding)
+            ItemRecommendTempleBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return RecommendTeampleViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ProgressTeamplViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecommendTeampleViewHolder, position: Int) {
         holder.bind()
     }
 

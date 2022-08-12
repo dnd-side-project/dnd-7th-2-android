@@ -8,13 +8,18 @@ import com.dnd.niceteam.R
 import com.dnd.niceteam.base.BaseFragment
 import com.dnd.niceteam.databinding.FragmentHomeBinding
 import com.dnd.niceteam.ui.home.ProgressTeampleItemDecoration
+import com.dnd.niceteam.ui.home.RecommendTeampleItemDecoration
 import com.dnd.niceteam.ui.home.adapter.ProgressTeampleAdapter
+import com.dnd.niceteam.ui.home.adapter.RecommendTeampleAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
+
     private val progressTeampleAdapter: ProgressTeampleAdapter by lazy { ProgressTeampleAdapter() }
     private val progressTeampleItemDecoration: ProgressTeampleItemDecoration by lazy { ProgressTeampleItemDecoration() }
+    private val recommendTeampleAdapter: RecommendTeampleAdapter by lazy { RecommendTeampleAdapter() }
+    private val recommendTeampleItemDecoration: RecommendTeampleItemDecoration by lazy { RecommendTeampleItemDecoration() }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,13 +32,17 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind()
+        // Dummy
         progressTeampleAdapter.submitList(arrayListOf(0, 1, 2, 3))
+        recommendTeampleAdapter.submitList(arrayListOf(0, 1, 2, 3))
     }
 
     private fun bind() {
         with(binding) {
             progressTeampleAdapter = this@HomeFragment.progressTeampleAdapter
             progressTeampleItemDecoration = this@HomeFragment.progressTeampleItemDecoration
+            recommendTeampleAdapter = this@HomeFragment.recommendTeampleAdapter
+            recommendTeampleItemDecoration = this@HomeFragment.recommendTeampleItemDecoration
         }
     }
 }

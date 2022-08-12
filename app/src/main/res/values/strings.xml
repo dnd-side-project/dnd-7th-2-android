@@ -20,4 +20,9 @@
     <string name="label_login_button">로그인</string>
     <string name="label_signup_button">회원가입</string>
     <string name="label_login_top">나만의 팀을 구하는\n가장 현명한 방법</string>
+
+    <!-- Home -->
+    <string name="label_home_write_recruitment">모집글 작성하기</string>
+    <string name="label_home_process_teample">내가 진행중인 팀플</string>
+    <string name="label_home_recommend_teample">나를 위한 추천 사이드팀플</string>
 </resources>

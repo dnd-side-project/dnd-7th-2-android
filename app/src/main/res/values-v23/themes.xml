@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <style name="Base.Theme.Teamgoo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -10,26 +11,8 @@
         <item name="colorSurface">@color/white</item>
         <item name="colorSecondary">@color/primary_green</item>
         <item name="android:colorBackground">@color/white</item>
-    </style>
-
-    <style name="Theme.Teamgoo" parent="Base.Theme.Teamgoo" />
-
-    <style name="Theme.Teamgoo.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="windowActionBarOverlay">true</item>
-        <item name="shapeAppearanceSmallComponent">
-            @style/ShapeAppearance.MaterialComponents.SmallComponent
-        </item>
-    </style>
-
-    <style name="Theme.Teamgoo.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
-        <item name="elevation">0dp</item>
-    </style>
-
-    <style name="Theme.Teamgoo.Splash">
-        <item name="android:windowBackground">@drawable/bg_splash_screen</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 </resources>
