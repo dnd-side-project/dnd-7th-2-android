@@ -37,7 +37,7 @@
             android:layout_marginStart="@dimen/vertical_padding_home_item_20dp"
             android:layout_marginTop="22dp"
             android:layout_marginBottom="26dp"
-            android:text="@string/label_home_write_recruitment"
+            android:text="@string/label_write_recruitment_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_top_banner"

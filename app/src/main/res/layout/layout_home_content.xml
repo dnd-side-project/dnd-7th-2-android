@@ -6,19 +6,19 @@
 
         <variable
             name="progressTeampleAdapter"
-            type="com.dnd.niceteam.ui.home.adapter.ProgressTeampleAdapter" />
+            type="com.dnd.niceteam.ui.home.homescreen.adapter.ProgressTeampleAdapter" />
 
         <variable
             name="progressTeampleItemDecoration"
-            type="com.dnd.niceteam.ui.home.ProgressTeampleItemDecoration" />
+            type="com.dnd.niceteam.ui.home.homescreen.ProgressTeampleItemDecoration" />
 
         <variable
             name="recommendTeampleAdapter"
-            type="com.dnd.niceteam.ui.home.adapter.RecommendTeampleAdapter" />
+            type="com.dnd.niceteam.ui.home.homescreen.adapter.RecommendTeampleAdapter" />
 
         <variable
             name="recommendTeampleItemDecoration"
-            type="com.dnd.niceteam.ui.home.RecommendTeampleItemDecoration" />
+            type="com.dnd.niceteam.ui.home.homescreen.RecommendTeampleItemDecoration" />
     </data>
 
     <merge>
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_home_item_16dp"
             android:layout_marginTop="40dp"
-            android:text="@string/label_home_process_teample"
+            android:text="@string/label_process_teample"
             android:textAppearance="@style/TextAppearance.Teamgoo.Title" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_home_item_16dp"
             android:layout_marginTop="32dp"
-            android:text="@string/label_home_recommend_teample"
+            android:text="@string/label_recommend_teample"
             android:textAppearance="@style/TextAppearance.Teamgoo.Title" />
 
         <androidx.recyclerview.widget.RecyclerView
