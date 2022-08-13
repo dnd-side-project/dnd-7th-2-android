@@ -11,7 +11,7 @@
     <string name="navigation_icon">navigation_icon</string>
     <string name="navigation_action">navigation_action</string>
 
-   <!-- Onboarding -->
+    <!-- Onboarding -->
     <string name="label_login">나만의 팀을 만나는 가장 현명한 방법</string>
     <string name="label_login_email_hint">학교 이메일을 입력해주세요.</string>
     <string name="label_login_password_hint">비밀번호를 입력해주세요.</string>
@@ -21,8 +21,20 @@
     <string name="label_signup_button">회원가입</string>
     <string name="label_login_top">나만의 팀을 구하는\n가장 현명한 방법</string>
 
-    <!-- Home -->
-    <string name="label_home_write_recruitment">모집글 작성하기</string>
-    <string name="label_home_process_teample">내가 진행중인 팀플</string>
-    <string name="label_home_recommend_teample">나를 위한 추천 사이드팀플</string>
+    <!-- Home screen -->
+    <string name="label_write_recruitment_button">모집글 작성하기</string>
+    <string name="label_process_teample">내가 진행중인 팀플</string>
+    <string name="label_recommend_teample">나를 위한 추천 사이드팀플</string>
+
+    <!-- Alarm -->
+    <string name="alarm">알림</string>
+    <string name="label_select_all">전체선택</string>
+    <string name="label_delete_button">삭제하기</string>
+    <string name="label_alarm_empty">아직 알림이 없어요!</string>
+    <string name="label_alarm_empty_detail">마음에 드는 모집글에 댓글을 달아보세요.\n나와 딱 맞는 팀원을 만나게 될지도 몰라요.</string>
+
+    <!-- Bookmark -->
+    <string name="bookmark">북마크</string>
+    <string name="label_bookmark_empty">북마크한 글이 없어요!</string>
+    <string name="label_bookmark_empty_detail">하고싶은 프로젝트가 있다면, 모집글을 찾아보세요 :)</string>
 </resources>
