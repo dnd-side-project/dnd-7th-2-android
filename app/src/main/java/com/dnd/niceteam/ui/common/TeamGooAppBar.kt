@@ -36,6 +36,7 @@ class TeamGooAppBar(context: Context, attrs: AttributeSet) : ConstraintLayout(co
                 setNavigationIcon(getResourceId(R.styleable.TeamGooAppBar_icon_navigation, 0))
                 setFirstAction(getResourceId(R.styleable.TeamGooAppBar_icon_first_action, 0))
                 setSecondAction(getResourceId(R.styleable.TeamGooAppBar_icon_second_action, 0))
+                setHomeAppBar(getBoolean(R.styleable.TeamGooAppBar_isHomeAppBar, false))
             } finally {
                 recycle()
             }
@@ -50,7 +51,7 @@ class TeamGooAppBar(context: Context, attrs: AttributeSet) : ConstraintLayout(co
         if (resourceId != 0) navigationIcon.setImageResource(resourceId)
     }
 
-    private fun setFirstAction(resourceId: Int) {
+    fun setFirstAction(resourceId: Int) {
         if (resourceId != 0) firstAction.setImageResource(resourceId)
         else firstAction.isVisible = isGone
     }
@@ -59,4 +60,17 @@ class TeamGooAppBar(context: Context, attrs: AttributeSet) : ConstraintLayout(co
         if (resourceId != 0) secondAction.setImageResource(resourceId)
         else secondAction.isVisible = isGone
     }
+
+    private fun setHomeAppBar(flag: Boolean) {
+        title.setTextAppearance(
+            if (flag) R.style.TextAppearance_Teamgoo_AppBar_Title_Purple
+            else R.style.TextAppearance_Teamgoo_AppBar_Title
+        )
+    }
+
+    fun clickedNavigationIcon(clicked: () -> Unit) = navigationIcon.setOnClickListener { clicked() }
+
+    fun clickedFirstAction(clicked: () -> Unit) = firstAction.setOnClickListener { clicked() }
+
+    fun clickedSecondAction(clicked: () -> Unit) = secondAction.setOnClickListener { clicked() }
 }

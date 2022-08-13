@@ -1,6 +1,8 @@
 package com.dnd.niceteam.util
 
 import android.graphics.Color
+import android.view.View
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.dnd.niceteam.ui.common.TeamGooDecoration
@@ -23,4 +25,9 @@ fun RecyclerView.bindDivider(dividerHeight: Float?, dividerPadding: Float?, divi
         color = dividerColor ?: Color.TRANSPARENT
     )
     addItemDecoration(divider)
+}
+
+@BindingAdapter("showEmptyView")
+fun ConstraintLayout.bindShowEmptyView(list: List<*>) {
+    visibility = if (list.isEmpty()) View.VISIBLE else View.GONE
 }

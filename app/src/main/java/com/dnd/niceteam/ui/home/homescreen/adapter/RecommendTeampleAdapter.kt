@@ -1,13 +1,11 @@
-package com.dnd.niceteam.ui.home.adapter
+package com.dnd.niceteam.ui.home.homescreen.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.dnd.niceteam.databinding.ItemProgressTeampleBinding
 import com.dnd.niceteam.databinding.ItemRecommendTempleBinding
-import com.dnd.niceteam.util.getScreenSize
 
 class RecommendTeampleAdapter :
     ListAdapter<Int, RecommendTeampleAdapter.RecommendTeampleViewHolder>(diffCallback) {
