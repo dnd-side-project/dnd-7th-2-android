@@ -1,4 +1,4 @@
-package com.dnd.niceteam.ui.home
+package com.dnd.niceteam.ui.home.homescreen
 
 import android.graphics.Rect
 import android.view.View

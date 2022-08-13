@@ -1,4 +1,4 @@
-package com.dnd.niceteam.ui.home.viewmodel
+package com.dnd.niceteam.ui.home.homescreen.viewmodel
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

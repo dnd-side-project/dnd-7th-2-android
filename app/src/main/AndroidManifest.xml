@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Teamgoo"
         tools:targetApi="31">
+<!--        <activity-->
+<!--            android:name="com.dnd.niceteam.ui.home.bookmark.view.BookmarkActivity"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name="com.dnd.niceteam.ui.home.alarm.view.AlarmActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true"
@@ -31,4 +37,5 @@
             android:name=".ui.MainActivity"
             android:exported="false" />
     </application>
+
 </manifest>

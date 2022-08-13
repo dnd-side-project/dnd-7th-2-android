@@ -1,8 +1,9 @@
-package com.dnd.niceteam.ui.home
+package com.dnd.niceteam.ui.home.homescreen
 
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.dnd.niceteam.util.dpToPx
 
 class ProgressTeampleItemDecoration : RecyclerView.ItemDecoration() {
     override fun getItemOffsets(
@@ -13,6 +14,6 @@ class ProgressTeampleItemDecoration : RecyclerView.ItemDecoration() {
     ) {
         super.getItemOffsets(outRect, view, parent, state)
         if (parent.getChildAdapterPosition(view) != state.itemCount - 1)
-            outRect.right = 40
+            outRect.right = parent.context.dpToPx(12f)
     }
 }

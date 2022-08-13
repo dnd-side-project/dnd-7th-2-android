@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="height_toolbar_56dp">56dp</dimen>
+    <dimen name="vertical_padding_button">16.5dp</dimen>
+
+    <!-- Home screen -->
     <dimen name="horizontal_padding_home_top_banner">20dp</dimen>
     <dimen name="width_item_progress_teample_280dp">280dp</dimen>
     <dimen name="horizontal_margin_home_item_16dp">16dp</dimen>
     <dimen name="horizontal_padding_home_item_16dp">16dp</dimen>
     <dimen name="vertical_padding_home_item_20dp">20dp</dimen>
+
+    <!-- Alarm -->
+    <dimen name="horizontal_padding_alarm_16dp">16dp</dimen>
+    <dimen name="vertical_padding_alarm_item_20dp">20dp</dimen>
+    <dimen name="height_alarm_item_divider_1dp">1dp</dimen>
+
+    <!-- Bookmark -->
+    <dimen name="horizontal_padding_bookmark_16dp">16dp</dimen>
+    <dimen name="vertical_padding_bookmark_26dp">26dp</dimen>
+    <dimen name="vertical_padding_bookmark_item_18dp">18dp</dimen>
 </resources>

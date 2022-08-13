@@ -6,19 +6,19 @@
 
         <variable
             name="progressTeampleAdapter"
-            type="com.dnd.niceteam.ui.home.adapter.ProgressTeampleAdapter" />
+            type="com.dnd.niceteam.ui.home.homescreen.adapter.ProgressTeampleAdapter" />
 
         <variable
             name="progressTeampleItemDecoration"
-            type="com.dnd.niceteam.ui.home.ProgressTeampleItemDecoration" />
+            type="com.dnd.niceteam.ui.home.homescreen.ProgressTeampleItemDecoration" />
 
         <variable
             name="recommendTeampleAdapter"
-            type="com.dnd.niceteam.ui.home.adapter.RecommendTeampleAdapter" />
+            type="com.dnd.niceteam.ui.home.homescreen.adapter.RecommendTeampleAdapter" />
 
         <variable
             name="recommendTeampleItemDecoration"
-            type="com.dnd.niceteam.ui.home.RecommendTeampleItemDecoration" />
+            type="com.dnd.niceteam.ui.home.homescreen.RecommendTeampleItemDecoration" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -37,8 +37,9 @@
                 android:layout_height="@dimen/height_toolbar_56dp"
                 app:icon_first_action="@drawable/ic_flag"
                 app:icon_navigation="@drawable/ic_teamgoo_purple_logo_small"
-                app:icon_second_action="@drawable/ic_alarm"
-                app:title="서울대학교" />
+                app:icon_second_action="@drawable/ic_alarm_home"
+                app:title="학교이름"
+                app:isHomeAppBar="true" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.core.widget.NestedScrollView
