@@ -13,6 +13,8 @@ import javax.inject.Inject
 @HiltViewModel
 class SignupViewModel @Inject constructor() : ViewModel() {
 
+    private val result = "123456"
+
     var school = MutableStateFlow("")
 
     var email = MutableStateFlow("")
@@ -21,10 +23,12 @@ class SignupViewModel @Inject constructor() : ViewModel() {
 
     var nickname = MutableStateFlow("")
 
+    var certificationNumber = MutableStateFlow("")
+
     private val _certificationSendEvent = MutableSharedFlow<Unit>()
     val certificationSendEvent = _certificationSendEvent.asSharedFlow()
 
-    private val _passwordEvent = MutableSharedFlow<Unit>()
+    private val _passwordEvent = MutableSharedFlow<Boolean>()
     val passwordEvent = _passwordEvent.asSharedFlow()
 
     private val _nickEvent = MutableSharedFlow<Unit>()
@@ -81,7 +85,8 @@ class SignupViewModel @Inject constructor() : ViewModel() {
     }
 
     fun navigatePassword() = viewModelScope.launch {
-        _passwordEvent.emit(Unit)
+        if (certificationNumber.value == result) _passwordEvent.emit(true)
+        else _passwordEvent.emit(false)
     }
 
     fun receiveCertification() = viewModelScope.launch {

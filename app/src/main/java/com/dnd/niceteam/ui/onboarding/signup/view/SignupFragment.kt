@@ -9,7 +9,6 @@ import androidx.activity.OnBackPressedCallback
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -110,8 +109,12 @@ class SignupFragment : BaseFragment<FragmentSignupBinding>(R.layout.fragment_sig
         lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 signUpViewModel.passwordEvent.collectLatest {
-                    requireContext().teamGooToastMessage("학교인증에 성공했어요")
-                    findNavController().navigate(R.id.action_signupFragment_to_passwordFragment)
+                    if (it) {
+                        requireContext().teamGooToastMessage("학교인증에 성공했어요")?.show()
+                        findNavController().navigate(R.id.action_signupFragment_to_passwordFragment)
+                    } else {
+                        requireContext().teamGooToastMessage("인증번호를 확인해주세요.")?.show()
+                    }
                 }
             }
         }
