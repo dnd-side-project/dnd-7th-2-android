@@ -37,4 +37,18 @@
     <string name="bookmark">북마크</string>
     <string name="label_bookmark_empty">북마크한 글이 없어요!</string>
     <string name="label_bookmark_empty_detail">하고싶은 프로젝트가 있다면, 모집글을 찾아보세요 :)</string>
+
+    <!-- Signup & Login -->
+    <string name="label_school_select">학교 선택</string>
+    <string name="label_school_email">학교 이메일</string>
+    <string name="label_signup_school_name_hint">학교 이름을 입력해주세요.</string>
+    <string name="label_signup_school_email_hint">학교 이메일을 입력해주세요.</string>
+    <string name="label_agree">label_agree</string>
+    <string name="label_description_agree">개인정보 수집 및 이용에 동의해요.</string>
+    <string name="label_certification">인증 번호</string>
+    <string name="description_label_erase">label_erase</string>
+    <string name="description_label_check">label_check</string>
+    <string name="label_password_hint">영문 대문자, 소문자, 숫자 포함 8~20자</string>
+    <string name="label_nickname_hint">닉네임 입력해주세요.</string>
+
 </resources>
