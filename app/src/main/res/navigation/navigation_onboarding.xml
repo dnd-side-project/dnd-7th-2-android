@@ -9,19 +9,47 @@
         android:id="@+id/loginFragment"
         android:name="com.dnd.niceteam.ui.onboarding.login.view.LoginFragment"
         android:label="LoginFragment"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_signupFragment"
-            app:destination="@id/signupFragment" />
+            app:destination="@id/signupFragment"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
         android:name="com.dnd.niceteam.ui.onboarding.signup.view.SignupFragment"
         android:label="SignupFragment"
-        tools:layout="@layout/fragment_signup" />
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.dnd.niceteam.ui.onboarding.profile.view.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.dnd.niceteam.ui.onboarding.password.view.PasswordFragment"
+        android:label="PasswordFragment"
+        tools:layout="@layout/fragment_password">
+        <action
+            android:id="@+id/action_passwordFragment_to_nickNameFragment"
+            app:destination="@id/nickNameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nickNameFragment"
+        android:name="com.dnd.niceteam.ui.onboarding.nickname.view.NickNameFragment"
+        android:label="NickNameFragment"
+        tools:layout="@layout/fragment_nickname">
+        <action
+            android:id="@+id/action_nickNameFragment_to_nickNameCompleteFragment"
+            app:destination="@id/nickNameCompleteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nickNameCompleteFragment"
+        android:name="com.dnd.niceteam.ui.onboarding.nickname.view.NickNameCompleteFragment"
+        android:label="NickNameCompleteFragment"
+        tools:layout="@layout/fragment_nickname_complete" />
 </navigation>

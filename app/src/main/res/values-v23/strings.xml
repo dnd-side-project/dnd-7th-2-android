@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Onboarding -->
-    <string name="label_login">나만의 팀을 만나는 가장 현명한 방법</string>
-    <string name="label_login_email_hint">학교 이메일을 입력해주세요.</string>
-    <string name="label_login_password_hint">비밀번호를 입력해주세요.</string>
-    <string name="label_email">학교 이메일</string>
-    <string name="label_password">비밀번호</string>
-    <string name="label_login_button">로그인</string>
-    <string name="label_signup_button">회원가입</string>
-    <string name="label_login_top">나만의 팀을 구하는\n가장 현명한 방법</string>
     <string name="label_school_select">학교 선택</string>
     <string name="label_school_email">학교 이메일</string>
     <string name="label_signup_school_name_hint">학교 이름을 입력해주세요.</string>
