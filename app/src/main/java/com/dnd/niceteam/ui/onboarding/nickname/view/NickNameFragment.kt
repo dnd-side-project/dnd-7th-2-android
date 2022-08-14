@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
@@ -62,6 +63,12 @@ class NickNameFragment : BaseFragment<FragmentNicknameBinding>(R.layout.fragment
     private fun bind() {
         binding.viewmodel = signUpViewModel
         binding.toolbar.clickedNavigationIcon { findNavController().navigateUp() }
+        binding.etNickname.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                findNavController().navigate(R.id.action_nickNameFragment_to_nickNameCompleteFragment)
+            }
+            false
+        }
     }
 
     private fun validateNickname() {

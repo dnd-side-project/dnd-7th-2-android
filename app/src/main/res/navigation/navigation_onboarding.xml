@@ -42,5 +42,14 @@
         android:id="@+id/nickNameFragment"
         android:name="com.dnd.niceteam.ui.onboarding.nickname.view.NickNameFragment"
         android:label="NickNameFragment"
-        tools:layout="@layout/fragment_nickname" />
+        tools:layout="@layout/fragment_nickname">
+        <action
+            android:id="@+id/action_nickNameFragment_to_nickNameCompleteFragment"
+            app:destination="@id/nickNameCompleteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nickNameCompleteFragment"
+        android:name="com.dnd.niceteam.ui.onboarding.nickname.view.NickNameCompleteFragment"
+        android:label="NickNameCompleteFragment"
+        tools:layout="@layout/fragment_nickname_complete" />
 </navigation>
