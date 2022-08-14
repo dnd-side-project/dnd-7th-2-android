@@ -19,6 +19,9 @@ class LoginViewModel @Inject constructor() : ViewModel() {
     private val _signUpEvent = MutableSharedFlow<Unit>()
     val signUpEvent = _signUpEvent.asSharedFlow()
 
+    private val _loginEvent = MutableSharedFlow<Boolean>()
+    val loginEvent = _loginEvent.asSharedFlow()
+
     fun validateEmail(
         handleInputSuccess: () -> Unit,
         handleInputError: () -> Unit
@@ -28,6 +31,11 @@ class LoginViewModel @Inject constructor() : ViewModel() {
             false -> handleInputError()
             true -> handleInputSuccess()
         }
+    }
+
+    fun clickedLogin() = viewModelScope.launch {
+        if(email.value.isEmpty() || password.value.isEmpty()) _loginEvent.emit(false)
+        else _loginEvent.emit(true)
     }
 
     fun navigateToSignUp() = viewModelScope.launch {

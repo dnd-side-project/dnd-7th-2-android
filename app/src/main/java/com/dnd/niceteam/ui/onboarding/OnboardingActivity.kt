@@ -34,8 +34,6 @@ class OnboardingActivity : AppCompatActivity() {
                     hideKeyboard(view)
                     view.clearFocus()
                 }
-            } else {
-                return true
             }
         }
         return super.dispatchTouchEvent(ev)

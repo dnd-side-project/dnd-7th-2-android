@@ -128,6 +128,7 @@
                 style="@style/Widget.Teamgoo.Button.Stroke.Purple"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="@{()->viewmodel.clickedLogin()}"
                 android:stateListAnimator="@null"
                 android:text="@string/label_login_button"
                 android:textColor="@color/primary_purple" />

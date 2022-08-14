@@ -15,7 +15,7 @@ fun Context.teamGooToastMessage(text: String): Toast? {
         DataBindingUtil.inflate(inflater, R.layout.layout_toast, null, false)
     binding.tvTitle.text = text
     return Toast(this).apply {
-        setGravity(Gravity.BOTTOM, 0, dpToPx(16f))
+        setGravity(Gravity.BOTTOM, 0, dpToPx(100f))
         duration = Toast.LENGTH_SHORT
         view = binding.root
     }
