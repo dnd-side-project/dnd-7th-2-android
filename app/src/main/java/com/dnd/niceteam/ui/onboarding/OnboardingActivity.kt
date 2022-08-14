@@ -24,16 +24,18 @@ class OnboardingActivity : AppCompatActivity() {
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         val view = currentFocus
 
-        if (view != null && ev.action == MotionEvent.ACTION_UP || ev.action == MotionEvent.ACTION_MOVE
-            && view is TextInputEditText && !view.javaClass.name.startsWith("android.webkit.")
-        ) {
-            val locationList = IntArray(2)
-            view.getLocationOnScreen(locationList)
-            val x = ev.rawX + view.left - locationList[0]
-            val y = ev.rawY + view.top - locationList[1]
-            if (x < view.left || x > view.right || y < view.top || y > view.bottom) {
-                hideKeyboard(view)
-                view.clearFocus()
+        if (view != null && ev.action == MotionEvent.ACTION_UP) {
+            if (view is TextInputEditText && !view.javaClass.name.startsWith("android.webkit.")) {
+                val locationList = IntArray(2)
+                view.getLocationOnScreen(locationList)
+                val x = ev.rawX + view.left - locationList[0]
+                val y = ev.rawY + view.top - locationList[1]
+                if (x < view.left || x > view.right || y < view.top || y > view.bottom) {
+                    hideKeyboard(view)
+                    view.clearFocus()
+                }
+            } else {
+                return true
             }
         }
         return super.dispatchTouchEvent(ev)
