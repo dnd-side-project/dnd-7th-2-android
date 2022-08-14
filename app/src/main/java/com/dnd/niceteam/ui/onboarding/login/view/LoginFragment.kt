@@ -8,6 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import com.dnd.niceteam.R
 import com.dnd.niceteam.base.BaseFragment
 import com.dnd.niceteam.databinding.FragmentLoginBinding
@@ -45,6 +46,14 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(R.layout.fragment_login
                         handleInputSuccess = { handleInputSuccess(binding.etEmail) },
                         handleInputError = { handleInputError(binding.etEmail, "이메일 형식이 확인해주세요.") }
                     )
+                }
+            }
+        }
+
+        lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                loginViewModel.signUpEvent.collectLatest {
+                    findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
                 }
             }
         }

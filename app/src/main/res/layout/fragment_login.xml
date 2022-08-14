@@ -140,6 +140,7 @@
                 style="@style/Widget.Teamgoo.Button.Purple"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> viewmodel.navigateToSignUp()}"
                 android:stateListAnimator="@null"
                 android:text="@string/label_signup_button"
                 android:textColor="@color/white" />
