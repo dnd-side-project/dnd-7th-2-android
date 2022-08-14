@@ -12,6 +12,8 @@ import androidx.navigation.fragment.findNavController
 import com.dnd.niceteam.R
 import com.dnd.niceteam.base.BaseFragment
 import com.dnd.niceteam.databinding.FragmentNicknameCompleteBinding
+import com.dnd.niceteam.ui.onboarding.nickname.Level
+import com.dnd.niceteam.ui.onboarding.nickname.adapter.LevelAdapter
 import com.dnd.niceteam.ui.onboarding.signup.viewmodel.SignupViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,6 +27,11 @@ class NickNameCompleteFragment() :
             requireContext(),
             R.anim.anim_rotate
         )
+    }
+    private val levelAdapter by lazy {
+        LevelAdapter(animTransTwits) {
+            it.setImageDrawable(resources.getDrawable(R.drawable.ic_level_1_egg))
+        }
     }
 
     override fun onAttach(context: Context) {
@@ -56,7 +63,8 @@ class NickNameCompleteFragment() :
 
     private fun bind() {
         binding.viewmodel = signUpViewModel
-        binding.ivEgg.startAnimation(animTransTwits)
+        binding.rvLevel.adapter = levelAdapter
+        levelAdapter.submitList(Level.valueName())
         binding.toolbar.clickedNavigationIcon { findNavController().navigateUp() }
     }
 
