@@ -19,7 +19,7 @@
             android:id="@+id/cl_top"
             android:layout_width="0dp"
             android:layout_height="210dp"
-            android:background="@drawable/bg_dark_purple_bottom_radius_15dp"
+            android:background="@drawable/bg_dark_purple_bottom_15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">

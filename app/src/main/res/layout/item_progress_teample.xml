@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="29dp"
-            android:background="@drawable/bg_purple_bottom_radius_16dp"
+            android:background="@drawable/bg_purple_bottom_16dp"
             android:gravity="center"
             android:paddingVertical="12dp"
             android:text="얼마 안 남았어요. 조금만 더 힘을 내요!"
