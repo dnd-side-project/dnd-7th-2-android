@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="bookmarkViewModel"
+            type="com.dnd.niceteam.ui.home.bookmark.viewmodel.BookmarkViewModel" />
+
+        <variable
+            name="bookmarkAdapter"
+            type="com.dnd.niceteam.ui.home.bookmark.adapter.BookmarkAdapter" />
+
+        <variable
+            name="bookmarkItemDecoration"
+            type="com.dnd.niceteam.ui.home.bookmark.BookmarkItemDecoration" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.bookmark.view.BookmarkActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/layout_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.Teamgoo.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.dnd.niceteam.ui.common.TeamGooAppBar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_toolbar_56dp"
+                app:icon_navigation="@drawable/ic_back"
+                app:title="@string/bookmark" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/layout_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_padding_bookmark_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_appbar"
+            app:tabIndicator="@drawable/tab_indicator_black_3dp"
+            app:tabIndicatorColor="@color/black"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/TextAppearance.Teamgoo.Tab"
+            app:tabTextColor="@color/gray_4">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_my_lecture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="내 강의 2" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_side"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="사이드 2" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_tab" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_bookmark"
+            adapter="@{bookmarkAdapter}"
+            itemDecoration="@{bookmarkItemDecoration}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/gray_1"
+            android:paddingHorizontal="@dimen/horizontal_padding_bookmark_16dp"
+            android:paddingVertical="@dimen/vertical_padding_bookmark_24dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_bookmark_empty"
+            showEmptyView="@{bookmarkViewModel.bookmarkList}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:paddingHorizontal="@dimen/horizontal_padding_bookmark_16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <TextView
+                android:id="@+id/tv_bookmark_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="102dp"
+                android:text="@string/label_bookmark_empty"
+                android:textColor="@color/gray_6"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_bookmark_empty_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/label_bookmark_empty_detail"
+                android:textColor="@color/gray_4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_bookmark_empty" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
