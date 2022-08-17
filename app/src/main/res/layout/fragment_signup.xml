@@ -18,7 +18,7 @@
         <com.dnd.niceteam.ui.common.TeamGooAppBar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/height_toolbar_56dp"
+            android:layout_height="@dimen/height_toolbar_64dp"
             app:icon_navigation="@drawable/ic_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

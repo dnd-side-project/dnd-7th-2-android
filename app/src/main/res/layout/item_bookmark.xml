@@ -61,14 +61,14 @@
             app:layout_constraintTop_toBottomOf="@id/tv_title">
 
             <com.google.android.material.chip.Chip
-                style="@style/Widget.Teamgoo.Chip.ItemBookmark"
+                style="@style/Widget.Teamgoo.Chip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="강의명"
                 tools:text="강의명" />
 
             <com.google.android.material.chip.Chip
-                style="@style/Widget.Teamgoo.Chip.ItemBookmark"
+                style="@style/Widget.Teamgoo.Chip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="강의요일과 시간"
@@ -89,7 +89,7 @@
                 android:id="@+id/iv_personnel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_team_light_gray" />
+                android:src="@drawable/ic_team" />
 
             <TextView
                 android:id="@+id/tv_personnel"
