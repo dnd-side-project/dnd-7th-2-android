@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dnd.niceteam.ui.mypage.applicationstatus.viewmodel.ApplicationStatusViewModel" />
+
+        <variable
+            name="adapter"
+            type="com.dnd.niceteam.ui.mypage.applicationstatus.adapter.ApplicationStatusAdapter" />
+
+        <variable
+            name="itemDecoration"
+            type="com.dnd.niceteam.ui.mypage.applicationstatus.ApplicationStatusItemDecoration" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.mypage.applicationstatus.view.ApplicationStatusActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/layout_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.Teamgoo.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.dnd.niceteam.ui.common.TeamGooAppBar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_toolbar_64dp"
+                app:icon_navigation="@drawable/ic_back"
+                app:title="@string/application_status" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_padding_application_status_16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_appbar"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_all"
+                style="@style/Widget.Teamgoo.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_chip_all" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_apply"
+                style="@style/Widget.Teamgoo.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_chip_apply" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_accept"
+                style="@style/Widget.Teamgoo.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_chip_accept" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_end_recruitment"
+                style="@style/Widget.Teamgoo.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_chip_end_recruitment" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_application_status"
+            adapter="@{adapter}"
+            itemDecoration="@{itemDecoration}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="@dimen/horizontal_padding_application_status_16dp"
+            android:paddingVertical="16dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chip_group"
+            app:spanCount="2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_application_status_empty"
+            showEmptyView="@{viewModel.currentList}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:paddingHorizontal="@dimen/horizontal_padding_bookmark_16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chip_group">
+
+            <TextView
+                android:id="@+id/tv_bookmark_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="104dp"
+                android:text="@string/label_application_status_empty"
+                android:textAppearance="@style/TextAppearance.Teamgoo.EmptyView.Title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_bookmark_empty_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/label_application_status_empty_detail"
+                android:textAppearance="@style/TextAppearance.Teamgoo.EmptyView.Detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_bookmark_empty" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
