@@ -24,7 +24,7 @@
     <!-- Home screen -->
     <string name="label_write_recruitment_button">모집글 작성하기</string>
     <string name="label_process_teample">내가 진행중인 팀플</string>
-    <string name="label_recommend_teample">나를 위한 추천 사이드팀플</string>
+    <string name="label_recommend_teample">나를 위한 추천 사이드 팀플</string>
 
     <!-- Alarm -->
     <string name="alarm">알림</string>
@@ -58,4 +58,6 @@
     <string name="label_chip_apply">지원중</string>
     <string name="label_chip_accept">수락</string>
     <string name="label_chip_end_recruitment">모집종료</string>
+    <string name="label_application_status_empty">지원한 프로젝트가 없어요.</string>
+    <string name="label_application_status_empty_detail">하고싶은 프로젝트가 있다면,\n망설이지 말고 지금 바로 지원해보세요!</string>
 </resources>

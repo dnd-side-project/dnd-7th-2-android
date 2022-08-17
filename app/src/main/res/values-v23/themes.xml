@@ -9,7 +9,7 @@
         <item name="colorOnSurface">@color/black</item>
         <item name="colorAccent">@color/white</item>
         <item name="colorSurface">@color/white</item>
-        <item name="colorSecondary">@color/primary_green</item>
+        <item name="colorSecondary">@color/sub_light_purple</item>
         <item name="android:colorBackground">@color/white</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
