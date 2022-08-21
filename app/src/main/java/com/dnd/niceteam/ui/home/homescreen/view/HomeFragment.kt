@@ -1,5 +1,6 @@
 package com.dnd.niceteam.ui.home.homescreen.view
 
+//import com.dnd.niceteam.ui.home.bookmark.view.BookmarkActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +9,12 @@ import android.view.ViewGroup
 import com.dnd.niceteam.R
 import com.dnd.niceteam.base.BaseFragment
 import com.dnd.niceteam.databinding.FragmentHomeBinding
+import com.dnd.niceteam.ui.home.alarm.view.AlarmActivity
+import com.dnd.niceteam.ui.home.bookmark.view.BookmarkActivity
 import com.dnd.niceteam.ui.home.homescreen.ProgressTeampleItemDecoration
 import com.dnd.niceteam.ui.home.homescreen.RecommendTeampleItemDecoration
 import com.dnd.niceteam.ui.home.homescreen.adapter.ProgressTeampleAdapter
 import com.dnd.niceteam.ui.home.homescreen.adapter.RecommendTeampleAdapter
-import com.dnd.niceteam.ui.home.alarm.view.AlarmActivity
-//import com.dnd.niceteam.ui.home.bookmark.view.BookmarkActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -44,12 +45,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     private fun initView() {
         with(binding) {
             toolbar.clickedFirstAction {
-//                startActivity(
-//                    Intent(
-//                        requireContext(),
-//                        BookmarkActivity::class.java
-//                    )
-//                )
+                startActivity(
+                    Intent(
+                        requireContext(),
+                        BookmarkActivity::class.java
+                    )
+                )
             }
             toolbar.clickedSecondAction {
                 startActivity(

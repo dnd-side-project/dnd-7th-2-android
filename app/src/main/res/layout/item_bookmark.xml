@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_stroke_gray_12dp"
+        android:paddingHorizontal="@dimen/horizontal_padding_bookmark_16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_dday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_white_stroke_purple_6dp"
+            android:paddingHorizontal="6dp"
+            android:text="D-18"
+            android:textColor="@color/primary_purple"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="D-18" />
+
+        <ImageView
+            android:id="@+id/iv_bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_bookmark_purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="18dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="작성한 강의명 모집글제목 작성한 강의명이\n너무 길어진다면 두줄로"
+            android:textAppearance="@style/TextAppearance.Teamgoo.Item.Title"
+            app:layout_constraintEnd_toStartOf="@id/iv_bookmark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_dday"
+            tools:text="작성한 강의명 모집글제목 작성한 강의명이\n너무 길어진다면 두줄로" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.Teamgoo.Chip.ItemBookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="강의명"
+                tools:text="강의명" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.Teamgoo.Chip.ItemBookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="강의요일과 시간"
+                tools:text="강의요일과 시간" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chip_group">
+
+            <ImageView
+                android:id="@+id/iv_personnel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_team_light_gray" />
+
+            <TextView
+                android:id="@+id/tv_personnel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13명 모집"
+                android:textColor="@color/gray_4"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/view_circle"
+                app:layout_constraintStart_toEndOf="@id/view_circle"
+                tools:text="13명 모집" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chip_group">
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="댓글 12"
+                android:textColor="@color/gray_4"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/view_circle"
+                app:layout_constraintStart_toEndOf="@id/view_circle"
+                tools:text="댓글 12" />
+
+            <TextView
+                android:id="@+id/tv_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="조회 123"
+                android:textColor="@color/gray_4"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/view_circle"
+                app:layout_constraintStart_toEndOf="@id/view_circle"
+                tools:text="조회 123" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/ic_bookmark_14dp" />
+
+            <TextView
+                android:id="@+id/tv_bookmark_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="14"
+                android:textColor="@color/gray_4"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/view_circle"
+                app:layout_constraintStart_toEndOf="@id/view_circle"
+                tools:text="14" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

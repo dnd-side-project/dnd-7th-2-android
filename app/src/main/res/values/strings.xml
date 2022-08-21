@@ -52,4 +52,10 @@
     <string name="label_nickname_hint">닉네임 입력해주세요.</string>
     <string name="label_nickname">닉네임</string>
 
+    <!-- Application status -->
+    <string name="application_status">지원현황</string>
+    <string name="label_chip_all">전체</string>
+    <string name="label_chip_apply">지원중</string>
+    <string name="label_chip_accept">수락</string>
+    <string name="label_chip_end_recruitment">모집종료</string>
 </resources>
