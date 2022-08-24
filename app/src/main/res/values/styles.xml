@@ -21,6 +21,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="TextAppearance.Teamgoo.Dialog.Message" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/gray_6</item>
+    </style>
+
     <style name="TextAppearance.Teamgoo.EmptyView.Title" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="android:textColor">@color/gray_6</item>
         <item name="android:textSize">19sp</item>
@@ -92,9 +96,31 @@
         <item name="chipCornerRadius">50dp</item>
         <item name="chipStrokeWidth">1dp</item>
         <item name="chipStrokeColor">@drawable/selector_chip_stroke</item>
-        <item name="chipBackgroundColor">@color/gray_1</item>
+        <item name="chipBackgroundColor">@drawable/selector_chip_background</item>
         <item name="ensureMinTouchTargetSize">false</item>
         <item name="android:textSize">14dp</item>
         <item name="android:textColor">@drawable/selector_chip_text</item>
     </style>
+
+    <style name="TextAppearance.Teamgoo.Chip.Choice" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@drawable/selector_chip_text</item>
+    </style>
+
+    <style name="Widget.Teamgoo.Chip.Stroke.Purple" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipMinHeight">34dp</item>
+        <item name="chipCornerRadius">50dp</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStrokeColor">@color/primary_purple</item>
+        <item name="chipBackgroundColor">@color/white</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/primary_purple</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <style name="Widget.Teamgoo.BottomSheet" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_white_top_16dp</item>
+    </style>
+
 </resources>

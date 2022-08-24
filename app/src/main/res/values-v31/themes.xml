@@ -2,6 +2,7 @@
 <resources>
 
     <style name="Theme.Teamgoo.Splash">
-        <item name="android:windowSplashScreenBackground">@color/white</item>
+        <item name="android:windowSplashScreenBackground">@color/primary_purple</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_teamgoo_splash_logo</item>
     </style>
 </resources>

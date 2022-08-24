@@ -52,6 +52,43 @@
     <string name="label_nickname_hint">닉네임 입력해주세요.</string>
     <string name="label_nickname">닉네임</string>
 
+    <!-- My page -->
+    <string name="my_page">마이페이지</string>
+    <string name="label_level_1">Lv.1</string>
+    <string name="label_level_2">Lv.2</string>
+    <string name="label_level_3">Lv.3</string>
+    <string name="label_level_up">잘하고 있어요! 레벨업까지 달려봐요</string>
+    <string name="my_teample">내 팀플</string>
+    <string name="my_wrote">내가 쓴글</string>
+    <string name="notification_settings">알림설정</string>
+    <string name="terms_of_service">이용약관</string>
+    <string name="logout">로그아웃</string>
+    <string name="account_withdrawal">계정탈퇴</string>
+    <string name="service_center">고객센터</string>
+
+    <!-- My profile -->
+    <string name="profile">프로필</string>
+    <string name="label_profile_edit_button">수정</string>
+    <string name="label_team_again">재팀원 희망률</string>
+    <string name="label_finish_project">완주 프로젝트</string>
+    <string name="label_profile_detail">세부 정보</string>
+    <string name="label_interest">관심 분야</string>
+    <string name="label_appeal">님의 어필점은?</string>
+    <string name="label_rank">다른 팀원들은 이렇게 생각해요!</string>
+    <string name="label_all_rank_button">모두보기</string>
+
+    <!-- Edit profile -->
+    <string name="edit_profile">프로필 수정</string>
+    <string name="label_edit_profile_button">완료</string>
+    <string name="edit_nickname">닉네임 수정</string>
+    <string name="label_nickname_settings">로 할래요.</string>
+    <string name="label_my_title">나를 한 문장으로 소개해주세요.</string>
+    <string name="description_label_my_title_1">나는</string>
+    <string name="description_label_my_title_2">입니다.</string>
+    <string name="label_select_interest">관심분야를 최대 3개 선택해주세요.</string>
+    <string name="description_label_select_interest">선택하신 키워드 바탕으로 모집글을 추천해드려요!</string>
+    <string name="label_edit_appeal">어필하고 싶은 점을 자유롭게 적어주세요.</string>
+
     <!-- Application status -->
     <string name="application_status">지원현황</string>
     <string name="label_chip_all">전체</string>
