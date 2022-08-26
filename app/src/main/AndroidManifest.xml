@@ -14,11 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Teamgoo"
         tools:targetApi="31">
-<!--        <activity-->
-<!--            android:name=".ui.mypage.applicationstatus.view.ApplicationStatusActivity"-->
-<!--            android:exported="false" />-->
         <activity
-            android:name="com.dnd.niceteam.ui.home.bookmark.view.BookmarkActivity"
+            android:name=".ui.mypage.applicationstatus.view.ApplicationStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.bookmark.view.BookmarkActivity"
             android:exported="false" />
         <activity
             android:name=".ui.home.alarm.view.AlarmActivity"

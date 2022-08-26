@@ -5,9 +5,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="@dimen/width_item_progress_teample_280dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_item_progess_teample"
-        android:elevation="3dp"
+        android:layout_height="@dimen/height_item_progress_teample_160dp"
+        android:background="@drawable/bg_white_16dp"
+        android:elevation="2dp"
         android:paddingTop="@dimen/vertical_padding_home_item_20dp">
 
         <TextView
@@ -15,54 +15,59 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/horizontal_padding_home_item_16dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="8dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="융합적 사고와 글쓰기"
+            android:text="프로젝트 명이 길다면 쩜쩜쩜"
             android:textAppearance="@style/TextAppearance.Teamgoo.Item.Title"
             app:layout_constraintEnd_toStartOf="@id/tv_badge"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="프로젝트 명" />
+            tools:text="프로젝트 명이 길다면 쩜쩜쩜" />
 
         <TextView
             android:id="@+id/tv_badge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/horizontal_padding_home_item_16dp"
-            android:background="@drawable/bg_green_15dp"
+            android:background="@drawable/bg_purple_16dp"
             android:paddingHorizontal="8dp"
-            android:paddingVertical="4dp"
-            android:text="강의"
+            android:paddingVertical="2dp"
+            android:text="사이드"
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="강의" />
+            tools:text="사이드" />
 
         <TextView
             android:id="@+id/tv_teample_info"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/horizontal_padding_home_item_16dp"
-            android:layout_marginTop="4dp"
-            android:text="박성혜 | 월,수 10:30"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
+            android:text="# IT/소프트웨어/게임  # 기획/아이디어  # 대외활동"
             android:textColor="@color/gray_6"
             android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_badge"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_teample_name"
-            tools:text="카테고리 / 형태" />
+            tools:text="# IT/소프트웨어/게임  # 대외활동" />
 
         <LinearLayout
             android:id="@+id/layout_teample_personnel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:layout_marginStart="9dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_teample_info" >
+            app:layout_constraintTop_toBottomOf="@id/tv_teample_info">
 
             <ImageView
                 android:id="@+id/iv_personnel"
@@ -77,22 +82,21 @@
                 android:text="팀원 4명"
                 android:textColor="@color/gray_5"
                 android:textSize="12sp"
-                tools:text="팀원 4명" />
+                tools:text="팀원 6명" />
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_bottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="29dp"
-            android:background="@drawable/bg_purple_bottom_16dp"
+            android:background="@drawable/bg_light_purple_bottom_16dp"
             android:gravity="center"
             android:paddingVertical="12dp"
-            android:text="얼마 안 남았어요. 조금만 더 힘을 내요!"
-            android:textColor="@color/white"
+            android:text="🏁 팀플이 끝났다면 팀플완료를 해주세요!"
+            android:textColor="@color/primary_purple"
             android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_teample_personnel"
-            tools:text="얼마 안 남았어요. 조금만 더 힘을 내요!" />
+            tools:text="🏁 팀플이 끝났다면 팀플완료를 해주세요!" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

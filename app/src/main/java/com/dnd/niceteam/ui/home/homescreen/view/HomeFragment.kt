@@ -1,8 +1,9 @@
 package com.dnd.niceteam.ui.home.homescreen.view
 
-//import com.dnd.niceteam.ui.home.bookmark.view.BookmarkActivity
 import android.content.Intent
 import android.os.Bundle
+import android.text.Html
+import android.text.Spanned
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,22 +45,26 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private fun initView() {
         with(binding) {
-            toolbar.clickedFirstAction {
-                startActivity(
-                    Intent(
-                        requireContext(),
-                        BookmarkActivity::class.java
+            toolbar.apply {
+                clickedFirstAction {
+                    startActivity(
+                        Intent(
+                            requireContext(),
+                            BookmarkActivity::class.java
+                        )
                     )
-                )
-            }
-            toolbar.clickedSecondAction {
-                startActivity(
-                    Intent(
-                        requireContext(),
-                        AlarmActivity::class.java
+                }
+                clickedSecondAction {
+                    startActivity(
+                        Intent(
+                            requireContext(),
+                            AlarmActivity::class.java
+                        )
                     )
-                )
+                }
             }
+            layoutHomeTopBanner.tvTopBanner.text = getTopBannerText("닉네임")
+
         }
     }
 
@@ -70,5 +75,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             recommendTeampleAdapter = this@HomeFragment.recommendTeampleAdapter
             recommendTeampleItemDecoration = this@HomeFragment.recommendTeampleItemDecoration
         }
+    }
+
+    private fun getTopBannerText(nickName: String): Spanned {
+        val htmlText =
+            "<font>${nickName}님과<br></font><font><b>딱 맞는 팀원을<br></b></font><font>구해봐요!</font>"
+        return Html.fromHtml(htmlText, Html.FROM_HTML_MODE_COMPACT)
     }
 }

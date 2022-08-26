@@ -34,11 +34,11 @@
             <com.dnd.niceteam.ui.common.TeamGooAppBar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/height_toolbar_56dp"
-                app:icon_first_action="@drawable/ic_flag"
+                android:layout_height="@dimen/height_toolbar_64dp"
                 app:icon_navigation="@drawable/ic_teamgoo_purple_logo_small"
-                app:icon_second_action="@drawable/ic_alarm_home"
-                app:title="학교이름"
+                app:icon_first_action="@drawable/ic_bookmark"
+                app:icon_second_action="@drawable/ic_alarm_badge"
+                app:title="서울대학교"
                 app:isHomeAppBar="true" />
         </com.google.android.material.appbar.AppBarLayout>
 

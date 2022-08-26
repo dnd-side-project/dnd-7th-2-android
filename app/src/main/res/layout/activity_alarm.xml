@@ -31,7 +31,7 @@
             <com.dnd.niceteam.ui.common.TeamGooAppBar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/height_toolbar_56dp"
+                android:layout_height="@dimen/height_toolbar_64dp"
                 app:icon_first_action="@drawable/ic_trash"
                 app:icon_navigation="@drawable/ic_back"
                 app:title="@string/alarm" />
@@ -58,7 +58,7 @@
             android:id="@+id/tv_select_all"
             showAlarmSelectAll="@{alarmViewModel.deleteMode}"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/height_toolbar_56dp"
+            android:layout_height="@dimen/height_toolbar_64dp"
             android:layout_marginEnd="16dp"
             android:background="@color/white"
             android:gravity="center"
@@ -102,9 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="142dp"
                 android:text="@string/label_alarm_empty"
-                android:textColor="@color/gray_6"
-                android:textSize="19sp"
-                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.Teamgoo.EmptyView.Title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -117,8 +115,7 @@
                 android:gravity="center_horizontal"
                 android:lineSpacingExtra="2dp"
                 android:text="@string/label_alarm_empty_detail"
-                android:textColor="@color/gray_4"
-                android:textSize="12sp"
+                android:textAppearance="@style/TextAppearance.Teamgoo.EmptyView.Detail"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_alarm_empty" />
