@@ -33,8 +33,9 @@
         <item name="android:windowBackground">@drawable/bg_splash_screen</item>
     </style>
 
-    <style name="Theme.Teamgoo.BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/Widget.Teamgoo.BottomSheet</item>
+    <style name="Theme.Teamgoo.BottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="colorSecondary">@color/sub_light_purple</item>
+        <item name="bottomSheetStyle">@style/Widget.Teamgoo.BottomSheet.Modal</item>
     </style>
 
 </resources>

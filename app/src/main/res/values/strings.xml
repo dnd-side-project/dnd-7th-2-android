@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">팀구</string>
+    <string name="label_confirm_button">확인</string>
 
     <!-- bottom navigation -->
     <string name="home">홈</string>
@@ -29,6 +30,7 @@
     <!-- Alarm -->
     <string name="alarm">알림</string>
     <string name="label_select_all">전체선택</string>
+    <string name="label_unselect">선택해제</string>
     <string name="label_delete_button">삭제하기</string>
     <string name="label_alarm_empty">아직 알림이 없어요!</string>
     <string name="label_alarm_empty_detail">마음에 드는 모집글에 댓글을 달아보세요.\n나와 딱 맞는 팀원을 만나게 될지도 몰라요.</string>
@@ -59,7 +61,7 @@
     <string name="label_level_3">Lv.3</string>
     <string name="label_level_up">잘하고 있어요! 레벨업까지 달려봐요</string>
     <string name="my_teample">내 팀플</string>
-    <string name="my_wrote">내가 쓴글</string>
+    <string name="my_wrote">내가 쓴 글</string>
     <string name="notification_settings">알림설정</string>
     <string name="terms_of_service">이용약관</string>
     <string name="logout">로그아웃</string>
@@ -88,6 +90,9 @@
     <string name="label_select_interest">관심분야를 최대 3개 선택해주세요.</string>
     <string name="description_label_select_interest">선택하신 키워드 바탕으로 모집글을 추천해드려요!</string>
     <string name="label_edit_appeal">어필하고 싶은 점을 자유롭게 적어주세요.</string>
+    <string name="description_label_edit_appeal">부전공, 자격증, 프로젝트 경험, 포트폴리오등\n어필하고 싶은 점을 자유롭게 적어주세요.</string>
+    <string name="edit_appeal">소개글 입력</string>
+    <string name="label_edit_appeal_button">저장</string>
 
     <!-- Application status -->
     <string name="application_status">지원현황</string>
@@ -97,4 +102,18 @@
     <string name="label_chip_end_recruitment">모집종료</string>
     <string name="label_application_status_empty">지원한 프로젝트가 없어요.</string>
     <string name="label_application_status_empty_detail">하고싶은 프로젝트가 있다면,\n망설이지 말고 지금 바로 지원해보세요!</string>
+
+    <!-- My wrote -->
+    <string name="label_chip_recruitment">모집중</string>
+    <string name="label_chip_complete_recruitment">모집완료</string>
+    <string name="label_chip_fail_recruitment">모집실패</string>
+    <string name="label_pull_up_button">끌어올리기</string>
+    <string name="label_complete_recruitment_button">모집완료</string>
+    <string name="label_again_recruitment_button">재모집하기</string>
+    <string name="label_recruitment_wrote_empty">작성한 모집글이 없어요.</string>
+    <string name="label_recruitment_wrote_empty_detail">하고싶은 프로젝트로 직접 팀원을 모집해보세요 :)</string>
+    <string name="label_comment_wrote_empty">작성한 댓글이 없어요!</string>
+    <string name="label_comment_wrote_empty_detail">관심가는 프로젝트에 댓글을 남겨보세요 :)</string>
+    <string name="label_delete_comment">삭제</string>
+    <string name="label_delete_cancel_button">취소</string>
 </resources>
