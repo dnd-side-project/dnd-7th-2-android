@@ -22,6 +22,9 @@ object Version {
 
     const val GLIDE = "4.13.2"
     const val GLIDE_COMPILER = "4.12.0"
+
+    const val MATERIAL_CALENDAR = "2.0.1"
+    const val THREE_TEN_ABP = "1.1.1"
 }
 
 object Library {
@@ -61,5 +64,10 @@ object Library {
     object Glide {
         const val GLIDE = "com.github.bumptech.glide:glide:${Version.GLIDE}"
         const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:${Version.GLIDE_COMPILER}"
+    }
+
+    object Calendar {
+        const val MATERIAL_CALENDAR = "com.github.prolificinteractive:material-calendarview:${Version.MATERIAL_CALENDAR}"
+        const val THREE_TEN_ABP = "com.jakewharton.threetenabp:threetenabp:${Version.THREE_TEN_ABP}"
     }
 }

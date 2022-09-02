@@ -69,4 +69,7 @@ dependencies {
 
     implementation(Library.Glide.GLIDE)
     annotationProcessor(Library.Glide.GLIDE_COMPILER)
+
+    implementation(Library.Calendar.MATERIAL_CALENDAR)
+    implementation(Library.Calendar.THREE_TEN_ABP)
 }
