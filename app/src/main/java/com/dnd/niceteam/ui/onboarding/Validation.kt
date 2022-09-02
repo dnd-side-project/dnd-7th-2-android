@@ -30,7 +30,7 @@ object Validation {
         val nicknamePattern = "^[가-힣]*$"
         return when {
             nickname.isEmpty() -> null
-            !nicknamePattern.matches(nicknamePattern.toRegex()) -> false
+            !nickname.matches(nicknamePattern.toRegex()) -> false
             else -> true
         }
     }
