@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="myRecruitment"
+            type="com.dnd.niceteam.ui.mypage.mywrote.adapter.MyRecruitment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_status"
+            myRecruitmentStatus="@{myRecruitment.status}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="모집중" />
+
+        <TextView
+            android:id="@+id/tv_recruitment_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_gray_3_16dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="@{myRecruitment.type}"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_status"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="강의" />
+
+        <TextView
+            android:id="@+id/tv_recruitment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/pretendard_regular"
+            android:maxLines="1"
+            android:text="@{myRecruitment.title}"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_status"
+            tools:text="모집글 제목내용입니다. 328픽셀로 제한/가다가 쩜쩜쩜" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="2022.04.13"
+            android:textColor="@color/gray_3"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_recruitment"
+            tools:text="2022.04.13" />
+
+        <TextView
+            android:id="@+id/tv_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="댓글 12"
+            android:textColor="@color/gray_4"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_views_count"
+            app:layout_constraintEnd_toStartOf="@id/tv_views_count"
+            app:layout_constraintTop_toTopOf="@id/tv_views_count"
+            tools:text="댓글 12" />
+
+        <TextView
+            android:id="@+id/tv_views_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="조회 123"
+            android:textColor="@color/gray_4"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_bookmark"
+            app:layout_constraintEnd_toStartOf="@id/iv_bookmark"
+            app:layout_constraintTop_toTopOf="@id/iv_bookmark"
+            tools:text="조회 123" />
+
+        <ImageView
+            android:id="@+id/iv_bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_bookmark_14dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_bookmark_count"
+            app:layout_constraintEnd_toStartOf="@id/tv_bookmark_count"
+            app:layout_constraintTop_toTopOf="@id/tv_bookmark_count" />
+
+        <TextView
+            android:id="@+id/tv_bookmark_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="14"
+            android:textColor="@color/gray_4"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_recruitment"
+            tools:text="14" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_2"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_first"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                myRecruitmentFirstButton="@{myRecruitment.status}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:fontFamily="@font/petendard_semibold"
+                android:gravity="center"
+                android:paddingVertical="14dp"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                tools:text="끌어올리기" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_second"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                myRecruitmentSecondButton="@{myRecruitment.status}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:fontFamily="@font/petendard_semibold"
+                android:gravity="center"
+                android:paddingVertical="14dp"
+                android:text="@string/label_complete_recruitment_button"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
