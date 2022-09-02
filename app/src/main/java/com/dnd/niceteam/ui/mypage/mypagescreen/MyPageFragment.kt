@@ -15,6 +15,7 @@ import com.dnd.niceteam.base.BaseFragment
 import com.dnd.niceteam.databinding.FragmentMyPageBinding
 import com.dnd.niceteam.ui.mypage.applicationstatus.view.ApplicationStatusActivity
 import com.dnd.niceteam.ui.mypage.mypagescreen.viewmodel.MyPageViewModel
+import com.dnd.niceteam.ui.mypage.mywrote.view.MyWroteActivity
 import com.dnd.niceteam.ui.mypage.profile.view.ProfileActivity
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -39,13 +40,15 @@ class MyPageFragment : BaseFragment<FragmentMyPageBinding>(R.layout.fragment_my_
     private fun initView() {
         with(binding) {
             ivNavigationIcon.setOnClickListener { findNavController().navigateUp() }
-            layoutNickname.setOnClickListener {
+            tvNickname.setOnClickListener {
                 startActivity(Intent(requireContext(), ProfileActivity::class.java))
+            }
+            layoutMyWrote.setOnClickListener {
+                startActivity(Intent(requireContext(), MyWroteActivity::class.java))
             }
             layoutApplicationStatus.setOnClickListener {
                 startActivity(Intent(requireContext(), ApplicationStatusActivity::class.java))
             }
-            tvNotificationSettings.setOnClickListener { }
         }
     }
 
@@ -63,7 +66,7 @@ class MyPageFragment : BaseFragment<FragmentMyPageBinding>(R.layout.fragment_my_
 
     private fun handleLevelExperience(count: Int) {
         with(binding) {
-            val experienceViews = listOf<ImageView>(
+            val experienceViews = listOf(
                 ivExperience1,
                 ivExperience2,
                 ivExperience3,
@@ -74,11 +77,11 @@ class MyPageFragment : BaseFragment<FragmentMyPageBinding>(R.layout.fragment_my_
                 v.setImageDrawable(
                     if (i < count) ContextCompat.getDrawable(
                         requireContext(),
-                        R.drawable.bg_level_experience_fill
+                        R.drawable.ic_experience
                     )
                     else ContextCompat.getDrawable(
                         requireContext(),
-                        R.drawable.bg_level_experience_empty
+                        R.drawable.ic_experience_empty
                     )
                 )
             }

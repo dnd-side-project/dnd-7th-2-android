@@ -28,6 +28,6 @@ fun RecyclerView.bindDivider(dividerHeight: Float?, dividerPadding: Float?, divi
 }
 
 @BindingAdapter("showEmptyView")
-fun ConstraintLayout.bindShowEmptyView(list: List<*>) {
-    visibility = if (list.isEmpty()) View.VISIBLE else View.GONE
+fun ConstraintLayout.bindShowEmptyView(list: List<*>?) {
+    visibility = if (list?.isEmpty() == true) View.VISIBLE else View.GONE
 }

@@ -23,23 +23,26 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/layout_appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
             android:theme="@style/Theme.Teamgoo.AppBarOverlay">
 
             <com.dnd.niceteam.ui.common.TeamGooAppBar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_toolbar_64dp"
-                app:icon_navigation="@drawable/ic_teamgoo_purple_logo_small"
                 app:icon_first_action="@drawable/ic_bookmark"
+                app:icon_navigation="@drawable/ic_teamgoo_purple_logo_small"
                 app:icon_second_action="@drawable/ic_alarm_badge"
-                app:title="서울대학교"
-                app:isHomeAppBar="true" />
+                app:isHomeAppBar="true"
+                app:title="서울대학교" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.core.widget.NestedScrollView

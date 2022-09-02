@@ -54,28 +54,33 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_appbar" />
 
-        <TextView
-            android:id="@+id/tv_select_all"
-            showAlarmSelectAll="@{alarmViewModel.deleteMode}"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_top"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            alarmTopButton="@{alarmViewModel.deleteMode}"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/height_toolbar_64dp"
-            android:layout_marginEnd="16dp"
-            android:background="@color/white"
-            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_8dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingHorizontal="@dimen/padding_16dp"
+            android:paddingVertical="@dimen/padding_16dp"
             android:text="@string/label_select_all"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
             android:textColor="@color/primary_purple"
             android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/layout_appbar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/layout_appbar" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_delete_alarm"
             style="@style/Widget.Teamgoo.Button.Purple"
-            showAlarmDeleteButton="@{alarmViewModel.deleteList}"
+            alarmDeleteButton="@{alarmViewModel.deleteList}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/horizontal_padding_alarm_16dp"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
             android:layout_marginBottom="20dp"
             android:stateListAnimator="@null"
             android:text="@string/label_delete_button"
@@ -90,7 +95,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/white"
-            android:paddingHorizontal="@dimen/horizontal_padding_alarm_16dp"
+            android:paddingHorizontal="@dimen/padding_16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

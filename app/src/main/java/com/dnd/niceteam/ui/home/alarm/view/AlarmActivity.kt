@@ -40,7 +40,7 @@ class AlarmActivity : BaseActivity<ActivityAlarmBinding>(R.layout.activity_alarm
                 clickedNavigationIcon { finish() }
                 clickedFirstAction { this@AlarmActivity.alarmViewModel.changeDeleteMode() }
             }
-            tvSelectAll.setOnClickListener {
+            btnTop.setOnClickListener {
                 this@AlarmActivity.alarmAdapter.selectAll()
             }
             btnDeleteAlarm.setOnClickListener {

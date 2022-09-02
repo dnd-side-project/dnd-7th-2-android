@@ -22,7 +22,7 @@ fun TextView.bindApplicationStatusTag(type: String?) {
             setTextColor(ContextCompat.getColor(context, R.color.primary_purple))
         }
         STATUS_END_RECRUITMENT -> {
-            background = ContextCompat.getDrawable(context, R.drawable.bg_gray_16dp)
+            background = ContextCompat.getDrawable(context, R.drawable.bg_gray_4_16dp)
             text = context.getString(R.string.label_chip_end_recruitment)
             setTextColor(ContextCompat.getColor(context, R.color.white))
         }
