@@ -15,6 +15,21 @@
         android:theme="@style/Theme.Teamgoo"
         tools:targetApi="31">
         <activity
+            android:name=".ui.mypage.mywrote.view.MyWroteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mypage.profile.view.EditAppealActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mypage.profile.view.EditNicknameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mypage.profile.view.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mypage.profile.view.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.mypage.applicationstatus.view.ApplicationStatusActivity"
             android:exported="false" />
         <activity

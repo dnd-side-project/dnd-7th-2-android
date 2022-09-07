@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.mypage.mywrote.view.MyWroteActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/layout_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.Teamgoo.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.dnd.niceteam.ui.common.TeamGooAppBar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_toolbar_64dp"
+                app:icon_navigation="@drawable/ic_back"
+                app:title="@string/my_wrote" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/layout_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_appbar"
+            app:tabIndicator="@drawable/tab_indicator_black_3dp"
+            app:tabIndicatorColor="@color/black"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/TextAppearance.Teamgoo.Tab"
+            app:tabTextColor="@color/gray_4">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_recruitment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="모집글" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="댓글" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_tab" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

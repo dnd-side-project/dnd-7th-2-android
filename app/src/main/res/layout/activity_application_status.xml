@@ -44,7 +44,7 @@
             android:id="@+id/chip_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/horizontal_padding_application_status_16dp"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
             android:layout_marginTop="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,20 +81,30 @@
                 android:text="@string/label_chip_end_recruitment" />
         </com.google.android.material.chip.ChipGroup>
 
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="9dp"
+            android:background="@color/gray_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chip_group" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_application_status"
             adapter="@{adapter}"
             itemDecoration="@{itemDecoration}"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="10dp"
-            android:paddingHorizontal="@dimen/horizontal_padding_application_status_16dp"
+            android:background="@color/gray_1"
+            android:paddingHorizontal="@dimen/padding_16dp"
             android:paddingVertical="16dp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/chip_group"
+            app:layout_constraintTop_toBottomOf="@id/divider"
             app:spanCount="2" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -103,11 +113,11 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/white"
-            android:paddingHorizontal="@dimen/horizontal_padding_bookmark_16dp"
+            android:paddingHorizontal="@dimen/padding_16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/chip_group">
+            app:layout_constraintTop_toBottomOf="@id/divider">
 
             <TextView
                 android:id="@+id/tv_bookmark_empty"

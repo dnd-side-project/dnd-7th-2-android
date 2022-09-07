@@ -5,7 +5,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/height_recommend_teample_item_138dp"
         android:background="@drawable/bg_item_recommend_teample">
 
         <TextView
@@ -17,7 +17,7 @@
             android:layout_marginEnd="8dp"
             android:ellipsize="end"
             android:maxLines="2"
-            android:text="사이드 프로젝트 명 또는 제목글 입력함 길어지면 최대 두줄로 입력됩니다."
+            android:text="사이드 프로젝트 명 또는 제목글"
             android:textAppearance="@style/TextAppearance.Teamgoo.Item.Title"
             app:layout_constraintEnd_toStartOf="@id/tv_teample_dday"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,10 +31,12 @@
             android:layout_marginTop="21dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/bg_white_stroke_purple_6dp"
+            android:fontFamily="@font/pretendard_medium"
             android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
             android:text="D-23"
             android:textColor="@color/primary_purple"
-            android:textSize="12sp"
+            android:textSize="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="D-23" />
@@ -53,20 +55,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="# IT/소프트웨어/게임"
-                tools:text="#IT/소프트웨어/게임" />
+                tools:text="# IT/소프트웨어/게임" />
 
             <com.google.android.material.chip.Chip
                 style="@style/Widget.Teamgoo.Chip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="# 기획/아이디어"
-                tools:text="# 기획/아이디어" />
-
-            <com.google.android.material.chip.Chip
-                style="@style/Widget.Teamgoo.Chip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="# 스터디"
+                android:text="# 대외활동"
                 tools:text="# 스터디" />
         </com.google.android.material.chip.ChipGroup>
 
@@ -74,13 +69,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
-            android:layout_marginTop="4dp"
             android:layout_marginBottom="16dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/chip_group_teample_info">
+            app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -92,9 +85,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:fontFamily="@font/pretendard_medium"
                 android:text="2명 모집"
                 android:textColor="@color/gray_5"
-                android:textSize="12sp"
+                android:textSize="12dp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/view_circle"
                 app:layout_constraintStart_toEndOf="@id/view_circle"
                 tools:text="2명 모집" />
@@ -108,9 +102,10 @@
                 android:id="@+id/tv_teample_period"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
                 android:text="2022/09/06 - 2023/03/13"
                 android:textColor="@color/gray_5"
-                android:textSize="12sp"
+                android:textSize="12dp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/view_circle"
                 app:layout_constraintStart_toEndOf="@id/view_circle"
                 tools:text="2022/09/06 - 2023/03/13" />

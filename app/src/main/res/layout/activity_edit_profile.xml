@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dnd.niceteam.ui.mypage.profile.viewmodel.EditProfileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.mypage.profile.view.EditProfileActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/layout_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.Teamgoo.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.dnd.niceteam.ui.common.TeamGooAppBar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_toolbar_64dp"
+                app:icon_navigation="@drawable/ic_back"
+                app:title="@string/edit_profile" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tv_edit_profile"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_8dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingHorizontal="@dimen/padding_16dp"
+            android:paddingVertical="@dimen/padding_16dp"
+            android:text="@string/label_edit_profile_button"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/primary_purple"
+            app:layout_constraintBottom_toBottomOf="@id/layout_appbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout_appbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_appbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding_16dp"
+                android:paddingVertical="36dp">
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gray_1_stroke_gray_2_16dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:minWidth="215dp"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="14dp"
+                    android:text="씰룩홈즈"
+                    android:textColor="@color/primary_purple"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="입력된 닉네임" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/label_nickname_settings"
+                    android:textColor="@color/gray_5"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_nickname"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_nickname" />
+
+                <TextView
+                    android:id="@+id/tv_my_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_space_edit_profile_48dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/label_my_title"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nickname" />
+
+                <TextView
+                    android:id="@+id/tv_my_title_description_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/description_label_my_title_1"
+                    android:textColor="@color/gray_5"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_title" />
+
+                <TextView
+                    android:id="@+id/tv_my_title_adjective"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/bg_gray_1_stroke_gray_2_8dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:gravity="center"
+                    android:minWidth="108dp"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="9.5dp"
+                    android:text="@={viewModel.selectedAdjectiveTitle}"
+                    android:textColor="@color/primary_purple"
+                    android:textSize="17dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_my_title_description_1"
+                    app:layout_constraintStart_toEndOf="@+id/tv_my_title_description_1"
+                    tools:text="목표지향적" />
+
+                <TextView
+                    android:id="@+id/tv_my_title_noun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/bg_gray_1_stroke_gray_2_8dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:gravity="center"
+                    android:minWidth="108dp"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="9.5dp"
+                    android:text="@={viewModel.selectedNounTitle}"
+                    android:textColor="@color/primary_purple"
+                    android:textSize="17dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_my_title_adjective"
+                    app:layout_constraintStart_toEndOf="@+id/tv_my_title_adjective"
+                    tools:text="커뮤니케이터" />
+
+                <TextView
+                    android:id="@+id/tv_my_title_description_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/description_label_my_title_2"
+                    android:textColor="@color/gray_5"
+                    android:textSize="19sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_my_title_noun"
+                    app:layout_constraintStart_toEndOf="@+id/tv_my_title_noun" />
+
+                <TextView
+                    android:id="@+id/tv_interest_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_space_edit_profile_48dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/label_select_interest"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_title_adjective" />
+
+                <TextView
+                    android:id="@+id/tv_interest_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:text="@string/description_label_select_interest"
+                    android:textColor="@color/gray_5"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_interest_title" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group_interest"
+                    allInterestTags="@{viewModel.allInterestList}"
+                    selectedInterestTags="@{viewModel.selectedInterestList}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_interest_description"
+                    app:selectionRequired="false"
+                    app:singleSelection="false" />
+
+                <TextView
+                    android:id="@+id/tv_appeal_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_space_edit_profile_48dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/label_edit_appeal"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chip_group_interest" />
+
+                <TextView
+                    android:id="@+id/tv_appeal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_gray_1_stroke_gray_2_8dp"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="10dp"
+                    android:text="자격사항\n· 컴퓨터활용능력1급\n· FAT 2급\n\n프로젝트 경험이 많아 ~~ 점이 있습니다!!"
+                    android:textColor="@color/gray_6"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_appeal_title"
+                    tools:text="자격사항\n· 컴퓨터활용능력1급\n· FAT 2급\n\n프로젝트 경험이 많아 ~~ 점이 있습니다!!" />
+
+                <TextView
+                    android:id="@+id/tv_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_gray_1_stroke_gray_2_8dp"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="10dp"
+                    android:text="www.behance.121212"
+                    android:textColor="@color/gray_6"
+                    android:textSize="15sp"
+                    app:drawableStartCompat="@drawable/ic_link"
+                    app:layout_constraintTop_toBottomOf="@id/tv_appeal"
+                    tools:text="www.behance.121212" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

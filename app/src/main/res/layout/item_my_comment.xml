@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="myComment"
+            type="com.dnd.niceteam.ui.mypage.mywrote.adapter.MyComment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/padding_16dp"
+        android:paddingStart="@dimen/padding_16dp">
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/pretendard_regular"
+            android:text="@{myComment.comment}"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cb_delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="모집글에 대한 댓글/답글 내용입니다.." />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@{myComment.date}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/gray_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_comment"
+            tools:text="2022.06.17" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/gray_3"
+            app:layout_constraintBottom_toBottomOf="@id/tv_date"
+            app:layout_constraintStart_toEndOf="@id/tv_date"
+            app:layout_constraintTop_toTopOf="@id/tv_date" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@{myComment.type}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/gray_3"
+            app:layout_constraintBottom_toBottomOf="@id/divider"
+            app:layout_constraintStart_toEndOf="@id/divider"
+            app:layout_constraintTop_toTopOf="@id/divider"
+            tools:text="강의 or 사이드" />
+
+        <View
+            android:id="@+id/divider_2"
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/gray_3"
+            app:layout_constraintBottom_toBottomOf="@id/tv_type"
+            app:layout_constraintStart_toEndOf="@id/tv_type"
+            app:layout_constraintTop_toTopOf="@id/tv_type" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@{myComment.title}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/gray_3"
+            app:layout_constraintBottom_toBottomOf="@id/divider_2"
+            app:layout_constraintEnd_toStartOf="@id/cb_delete"
+            app:layout_constraintStart_toEndOf="@id/divider_2"
+            app:layout_constraintTop_toTopOf="@id/divider_2"
+            tools:text="모집글 제목명" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cb_delete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:button="@drawable/cb_24dp"
+            android:clickable="false"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

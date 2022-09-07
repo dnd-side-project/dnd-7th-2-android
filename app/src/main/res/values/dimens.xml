@@ -2,28 +2,30 @@
 <resources>
     <dimen name="height_toolbar_64dp">64dp</dimen>
     <dimen name="width_custom_appbar_title_180dp">180dp</dimen>
+    <dimen name="width_custom_dialog_280dp">280dp</dimen>
     <dimen name="vertical_padding_button">16.5dp</dimen>
     <dimen name="padding4dp">4dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="padding_dialog_20dp">20dp</dimen>
 
     <!-- Home screen -->
     <dimen name="horizontal_padding_home_top_banner">20dp</dimen>
-    <dimen name="width_item_progress_teample_280dp">280dp</dimen>
-    <dimen name="height_item_progress_teample_160dp">160dp</dimen>
+    <dimen name="width_progress_teample_item_280dp">280dp</dimen>
+    <dimen name="height_progress_teample_item_160dp">160dp</dimen>
+    <dimen name="height_recommend_teample_item_138dp">138dp</dimen>
     <dimen name="horizontal_margin_home_item_16dp">16dp</dimen>
-    <dimen name="horizontal_padding_home_item_16dp">16dp</dimen>
     <dimen name="vertical_padding_home_item_20dp">20dp</dimen>
 
     <!-- Alarm -->
-    <dimen name="horizontal_padding_alarm_16dp">16dp</dimen>
     <dimen name="vertical_padding_alarm_item_20dp">20dp</dimen>
     <dimen name="height_alarm_item_divider_1dp">1dp</dimen>
 
     <!-- Bookmark -->
-    <dimen name="horizontal_padding_bookmark_16dp">16dp</dimen>
+    <dimen name="height_bookmark_item_172dp">172dp</dimen>
     <dimen name="vertical_padding_bookmark_26dp">26dp</dimen>
     <dimen name="vertical_padding_bookmark_item_18dp">18dp</dimen>
     <dimen name="vertical_padding_bookmark_24dp">24dp</dimen>
 
-    <!-- Application status -->
-    <dimen name="horizontal_padding_application_status_16dp">16dp</dimen>
+    <!-- My profile -->
+    <dimen name="vertical_space_edit_profile_48dp">48dp</dimen>
 </resources>

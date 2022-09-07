@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_16dp"
+        android:minWidth="@dimen/width_custom_dialog_280dp">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="2dp"
+            android:textAppearance="@style/TextAppearance.Teamgoo.Dialog.Message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="작성 중인 정보가 모두 사라져요.\n그래도 페이지에서 나갈까요?" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_first"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ripple_8dp"
+            android:fontFamily="@font/petendard_semibold"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:padding="10dp"
+            android:textColor="@color/primary_purple"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_second"
+            app:layout_constraintTop_toBottomOf="@id/tv_message"
+            tools:text="취소" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_second"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ripple_8dp"
+            android:fontFamily="@font/petendard_semibold"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:padding="10dp"
+            android:textColor="@color/gray_5"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="나가기" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
