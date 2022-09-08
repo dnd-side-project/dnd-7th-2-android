@@ -18,7 +18,7 @@
         android:label="SideFragment" />
     <fragment
         android:id="@+id/myPageFragment"
-        android:name="com.dnd.niceteam.ui.mypage.mypagescreen.MyPageFragment"
+        android:name="com.dnd.niceteam.ui.mypage.mypagescreen.view.MyPageFragment"
         android:label="MyPageFragment" />
 
 </navigation>
