@@ -1,9 +1,8 @@
-package com.dnd.niceteam.ui.mypage.mypagescreen
+package com.dnd.niceteam.ui.mypage.mypagescreen.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -15,6 +14,7 @@ import com.dnd.niceteam.base.BaseFragment
 import com.dnd.niceteam.databinding.FragmentMyPageBinding
 import com.dnd.niceteam.ui.mypage.applicationstatus.view.ApplicationStatusActivity
 import com.dnd.niceteam.ui.mypage.mypagescreen.viewmodel.MyPageViewModel
+import com.dnd.niceteam.ui.mypage.myteample.view.MyTeampleActivity
 import com.dnd.niceteam.ui.mypage.mywrote.view.MyWroteActivity
 import com.dnd.niceteam.ui.mypage.profile.view.ProfileActivity
 import kotlinx.coroutines.flow.collectLatest
@@ -42,6 +42,9 @@ class MyPageFragment : BaseFragment<FragmentMyPageBinding>(R.layout.fragment_my_
             ivNavigationIcon.setOnClickListener { findNavController().navigateUp() }
             tvNickname.setOnClickListener {
                 startActivity(Intent(requireContext(), ProfileActivity::class.java))
+            }
+            layoutMyTeample.setOnClickListener {
+                startActivity(Intent(requireContext(), MyTeampleActivity::class.java))
             }
             layoutMyWrote.setOnClickListener {
                 startActivity(Intent(requireContext(), MyWroteActivity::class.java))
