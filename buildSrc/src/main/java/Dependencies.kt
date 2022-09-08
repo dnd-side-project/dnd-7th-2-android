@@ -1,7 +1,7 @@
 object Version {
     const val COROUTINE = "1.6.1"
     const val CORE_KTX = "1.8.0"
-    const val APPCOMPAT = "1.4.2"
+    const val APPCOMPAT = "1.5.0"
     const val MATERIAL = "1.6.1"
     const val CONSTRAINT_LAYOUT = "2.1.4"
     const val VIEWMODEL = "2.6.0-alpha01"
