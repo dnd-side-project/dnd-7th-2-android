@@ -3,7 +3,8 @@
     <dimen name="height_toolbar_64dp">64dp</dimen>
     <dimen name="width_custom_appbar_title_180dp">180dp</dimen>
     <dimen name="width_custom_dialog_280dp">280dp</dimen>
-    <dimen name="vertical_padding_button">16.5dp</dimen>
+    <dimen name="vertical_padding_button_16.5dp">16.5dp</dimen>
+    <dimen name="vertical_padding_button_12dp">12dp</dimen>
     <dimen name="padding4dp">4dp</dimen>
     <dimen name="padding_16dp">16dp</dimen>
     <dimen name="padding_dialog_20dp">20dp</dimen>
@@ -13,7 +14,6 @@
     <dimen name="width_progress_teample_item_280dp">280dp</dimen>
     <dimen name="height_progress_teample_item_160dp">160dp</dimen>
     <dimen name="height_recommend_teample_item_138dp">138dp</dimen>
-    <dimen name="horizontal_margin_home_item_16dp">16dp</dimen>
     <dimen name="vertical_padding_home_item_20dp">20dp</dimen>
 
     <!-- Alarm -->
@@ -28,4 +28,8 @@
 
     <!-- My profile -->
     <dimen name="vertical_space_edit_profile_48dp">48dp</dimen>
+
+    <!-- My teample -->
+    <dimen name="height_my_teample_item_134dp">134dp</dimen>
+    <dimen name="height_my_teample_item_188dp">188dp</dimen>
 </resources>

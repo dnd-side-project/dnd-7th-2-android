@@ -15,6 +15,15 @@
         android:theme="@style/Theme.Teamgoo"
         tools:targetApi="31">
         <activity
+            android:name=".ui.mypage.myteample.view.ReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mypage.myteample.view.MyTeampleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mypage.myteample.view.MyTeampleActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.mypage.mywrote.view.MyWroteActivity"
             android:exported="false" />
         <activity
