@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="teampleDetail"
+            type="com.dnd.niceteam.ui.mypage.myteample.view.TeampleDetail" />
+
+        <variable
+            name="memberAdapter"
+            type="com.dnd.niceteam.ui.mypage.myteample.adapter.MemberSmallAdapter" />
+
+        <variable
+            name="memberItemDecoration"
+            type="com.dnd.niceteam.ui.mypage.myteample.MemberSmallItemDecoration" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.mypage.myteample.view.MyTeampleDetailActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/layout_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.Teamgoo.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.dnd.niceteam.ui.common.TeamGooAppBar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_toolbar_64dp"
+                app:icon_navigation="@drawable/ic_back" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_appbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_16dp"
+                    android:layout_marginTop="@dimen/padding4dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="@{teampleDetail.projectName}"
+                    android:textAppearance="@style/TextAppearance.Teamgoo.Title"
+                    app:layout_constraintEnd_toStartOf="@id/btn_see_recruitment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="팀구은행 핀테크 산업의 미래를 위한 청년 육성 경진대회" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_see_recruitment"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding4dp"
+                    android:layout_marginEnd="@dimen/padding_16dp"
+                    android:background="@drawable/bg_gray_4_4dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/label_see_recruitment_button"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_teample_detail_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_16dp"
+                    android:layout_marginTop="@dimen/padding_16dp"
+                    android:src="@drawable/ic_flag"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+                <TextView
+                    android:id="@+id/tv_teample_detail_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:text="@{teampleDetail.detail1}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/gray_5"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_teample_detail_1"
+                    app:layout_constraintStart_toEndOf="@id/iv_teample_detail_1"
+                    app:layout_constraintTop_toTopOf="@id/iv_teample_detail_1"
+                    tools:text="공모전" />
+
+                <ImageView
+                    android:id="@+id/iv_teample_detail_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_16dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/ic_category"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_teample_detail_1" />
+
+                <TextView
+                    android:id="@+id/tv_teample_detail_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:text="@{teampleDetail.detail2}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/gray_5"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_teample_detail_2"
+                    app:layout_constraintStart_toEndOf="@id/iv_teample_detail_2"
+                    app:layout_constraintTop_toTopOf="@id/iv_teample_detail_2"
+                    tools:text="기획/아이디어  |  IT/소프트웨어/게임" />
+
+                <TextView
+                    android:id="@+id/tv_personnel"
+                    myTeampleDetailPersonnel="@{teampleDetail.members}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/padding_16dp"
+                    android:layout_marginTop="60dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/label_member"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_teample_detail_2"
+                    tools:text="팀원 6" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_member"
+                    adapter="@{memberAdapter}"
+                    itemDecoration="@{memberItemDecoration}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/padding_16dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_personnel" />
+
+                <TextView
+                    android:id="@+id/tv_member_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/padding_16dp"
+                    android:layout_marginTop="44dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/label_member_title"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_member" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group_member_title"
+                    memberTitleTags="@{teampleDetail.members}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/padding_16dp"
+                    android:layout_marginTop="12dp"
+                    app:chipSpacingHorizontal="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_member_title" />
+
+                <TextView
+                    android:id="@+id/tv_detail_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/padding_16dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/label_detail_info"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chip_group_member_title" />
+
+                <ImageView
+                    android:id="@+id/iv_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_16dp"
+                    android:layout_marginTop="@dimen/padding_16dp"
+                    android:src="@drawable/ic_calendar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_detail_info" />
+
+                <TextView
+                    android:id="@+id/tv_project_date_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:text="@string/label_project_date"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/gray_5"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_calendar"
+                    app:layout_constraintStart_toEndOf="@id/iv_calendar"
+                    app:layout_constraintTop_toTopOf="@id/iv_calendar" />
+
+                <TextView
+                    android:id="@+id/tv_project_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:text="@{teampleDetail.date}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/gray_6"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_calendar"
+                    app:layout_constraintStart_toEndOf="@id/tv_project_date_title"
+                    app:layout_constraintTop_toTopOf="@id/iv_calendar"
+                    tools:text="2022.09.26 - 2022.10.21" />
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="120dp"
+                    android:src="@drawable/ic_location"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_project_date"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/tv_location_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:text="@string/label_location"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/gray_5"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_location"
+                    app:layout_constraintStart_toEndOf="@id/iv_location"
+                    app:layout_constraintTop_toTopOf="@id/iv_location" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:text="@{teampleDetail.location}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/gray_6"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_location"
+                    app:layout_constraintStart_toEndOf="@id/tv_location_title"
+                    app:layout_constraintTop_toTopOf="@id/iv_location"
+                    tools:text="온라인" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_export"
+            style="@style/Widget.Teamgoo.Button.Stroke.Purple"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="@dimen/padding4dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/label_export_member"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_complete"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_write_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:layout_marginBottom="-7dp"
+            android:background="@drawable/bg_gray_6_8dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:paddingHorizontal="13dp"
+            android:paddingVertical="5dp"
+            android:text="@string/label_go_write_a_review"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/view_triangle"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/view_triangle"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="43.8dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/balloon_tail_bottom_gray_6"
+            app:layout_constraintBottom_toTopOf="@id/btn_complete"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_complete"
+            style="@style/Widget.Teamgoo.Button.Purple"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding4dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/label_complete_teample"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_export" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
