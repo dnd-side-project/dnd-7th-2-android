@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dnd.niceteam.ui.mypage.myteample.viewmodel.ReviewViewModel" />
+
+        <variable
+            name="member"
+            type="com.dnd.niceteam.ui.mypage.myteample.view.Member" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="120dp">
+
+                <TextView
+                    android:id="@+id/tv_skip_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="-8dp"
+                    android:background="@drawable/bg_gray_6_8dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/label_skip_review"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/view_balloon_tail"
+                    app:layout_constraintEnd_toStartOf="@id/view_balloon_tail"
+                    app:layout_constraintTop_toTopOf="@id/view_balloon_tail" />
+
+                <View
+                    android:id="@+id/view_balloon_tail"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/balloon_tail_right_gray_6"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_skip"
+                    app:layout_constraintEnd_toStartOf="@id/btn_skip"
+                    app:layout_constraintTop_toTopOf="@id/btn_skip" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_skip"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/ripple_8dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="10dp"
+                    android:text="@string/label_skip_button"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/primary_purple"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    memberProfileImage="@{member.level}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dp"
+                    android:src="@drawable/ic_level_2_member_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_skip" />
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:text="@{member.nickname}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/gray_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_profile"
+                    tools:text="팀원닉네임" />
+
+                <TextView
+                    android:id="@+id/tv_review_tag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/padding_16dp"
+                    android:layout_marginTop="44dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/description_review_tag"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_nickname" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group"
+                    reviewTags="@{viewModel.reviewTags}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/padding_16dp"
+                    android:layout_marginTop="@dimen/padding_16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_review_tag"
+                    app:selectionRequired="false"
+                    app:singleSelection="false" />
+
+                <TextView
+                    android:id="@+id/tv_participation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/padding_16dp"
+                    android:layout_marginTop="48dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/description_participation"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chip_group" />
+
+                <com.dnd.niceteam.ui.common.TeamGooRatingBar
+                    android:id="@+id/rating_bar_participation"
+                    style="@style/Widget.Teamgoo.RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/padding_16dp"
+                    android:layout_marginTop="8dp"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:stepSize="0.1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_participation" />
+
+                <TextView
+                    android:id="@+id/tv_hope_team_again"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/padding_16dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="@string/description_hope_team_again"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rating_bar_participation" />
+
+                <com.dnd.niceteam.ui.common.TeamGooRatingBar
+                    android:id="@+id/rating_bar_hope_team_again"
+                    style="@style/Widget.Teamgoo.RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/padding_16dp"
+                    android:layout_marginTop="8dp"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:stepSize="0.1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_hope_team_again" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_cancel_skip"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#DDFFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel_skip"
+                style="@style/Widget.Teamgoo.Button.Stroke.Purple"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/label_cancel_skip_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
