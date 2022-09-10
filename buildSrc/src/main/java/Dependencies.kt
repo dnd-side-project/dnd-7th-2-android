@@ -29,7 +29,6 @@ object Version {
 
 object Library {
     object AndroidX {
-        const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.COROUTINE}"
         const val CORE_KTX = "androidx.core:core-ktx:${Version.CORE_KTX}"
         const val APPCOMPAT = "androidx.appcompat:appcompat:${Version.APPCOMPAT}"
         const val MATERIAL = "com.google.android.material:material:${Version.MATERIAL}"
@@ -45,7 +44,11 @@ object Library {
     }
 
     object Junit {
-        const val JUNIT = "junit:junit:${Version.JUNIT}"
+        const val JUNIT4 = "junit:junit:${Version.JUNIT}"
+        const val JUNIT5 = "org.junit.jupiter:junit-jupiter:5.7.2"
+        const val junitVintageEngine = "org.junit.vintage:junit-vintage-engine:5.7.2"
+        const val TRUTH = "com.google.truth:truth:1.1.2"
+        const val MOCKK = "io.mockk:mockk:1.12.0"
     }
 
     object Network {
@@ -54,11 +57,20 @@ object Library {
         const val MOSHI_KOTLIN = "com.squareup.moshi:moshi-kotlin:${Version.MOSHI}"
         const val OKHTTP = "com.squareup.okhttp3:okhttp:${Version.OKHTTP}"
         const val LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:${Version.OKHTTP}"
+        const val MOCKWEBSERVER = "com.squareup.okhttp3:mockwebserver:${Version.OKHTTP}"
     }
 
     object Hilt {
         const val HILT = "com.google.dagger:hilt-android:${Version.HILT}"
         const val HILT_COMPILER = "com.google.dagger:hilt-android-compiler:${Version.HILT}"
+        const val CORE = "com.google.dagger:hilt-core:${Version.HILT}"
+        const val COMPILER = "com.google.dagger:hilt-compiler:${Version.HILT}"
+    }
+
+    object Coroutine {
+        const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.COROUTINE}"
+        const val CORE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.COROUTINE}"
+        const val TEST = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2"
     }
 
     object Glide {
