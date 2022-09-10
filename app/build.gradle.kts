@@ -42,7 +42,7 @@ android {
 dependencies {
     implementation(project(":domain"))
 
-    implementation(Library.AndroidX.COROUTINE)
+    implementation(Library.Coroutine.COROUTINE)
     implementation(Library.AndroidX.CORE_KTX)
     implementation(Library.AndroidX.APPCOMPAT)
     implementation(Library.AndroidX.MATERIAL)
@@ -56,7 +56,7 @@ dependencies {
     androidTestImplementation(Library.AndroidX.TEST_JUNIT)
     androidTestImplementation(Library.AndroidX.ESPRESSO)
 
-    testImplementation(Library.Junit.JUNIT)
+    testImplementation(Library.Junit.JUNIT4)
 
     implementation(Library.Network.RETROFIT)
     implementation(Library.Network.MOSHI)
