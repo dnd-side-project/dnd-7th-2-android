@@ -1,0 +1,14 @@
+{
+  "success" : true,
+  "error": {
+    "code": "INVALID_INPUT_VALUE",
+    "message": "유효하지 않은 입력 값입니다.",
+    "errors": [
+      {
+        "field": "input-field",
+        "value": "input-value",
+        "reason": "error-reason"
+      }
+    ]
+  }
+}
