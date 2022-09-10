@@ -85,12 +85,12 @@
     <string name="edit_nickname">닉네임 수정</string>
     <string name="label_nickname_settings">로 할래요.</string>
     <string name="label_my_title">나를 한 문장으로 소개해주세요.</string>
-    <string name="description_label_my_title_1">나는</string>
-    <string name="description_label_my_title_2">입니다.</string>
+    <string name="description_my_title_1">나는</string>
+    <string name="description_my_title_2">입니다.</string>
     <string name="label_select_interest">관심분야를 최대 3개 선택해주세요.</string>
-    <string name="description_label_select_interest">선택하신 키워드 바탕으로 모집글을 추천해드려요!</string>
+    <string name="description_select_interest">선택하신 키워드 바탕으로 모집글을 추천해드려요!</string>
     <string name="label_edit_appeal">어필하고 싶은 점을 자유롭게 적어주세요.</string>
-    <string name="description_label_edit_appeal">부전공, 자격증, 프로젝트 경험, 포트폴리오등\n어필하고 싶은 점을 자유롭게 적어주세요.</string>
+    <string name="description_edit_appeal">부전공, 자격증, 프로젝트 경험, 포트폴리오등\n어필하고 싶은 점을 자유롭게 적어주세요.</string>
     <string name="edit_appeal">소개글 입력</string>
     <string name="label_edit_appeal_button">저장</string>
 
@@ -116,4 +116,39 @@
     <string name="label_comment_wrote_empty_detail">관심가는 프로젝트에 댓글을 남겨보세요 :)</string>
     <string name="label_delete_comment">삭제</string>
     <string name="label_delete_cancel_button">취소</string>
+
+    <!-- My teample -->
+    <string name="label_write_review_button">팀원 후기쓰기</string>
+    <string name="label_progress_teample_empty">진행 중인 팀플이 없어요.</string>
+    <string name="label_progress_teample_empty_detail">새로운 팀플을 시작하고 실력을 쌓아보세요!</string>
+    <string name="label_complete_teample_empty">완료한 팀플이 없어요.</string>
+    <string name="label_complete_teample_empty_detail">팀플을 끝까지 완주하고 실려을 쌓아보세요!</string>
+
+    <!-- My teample detail -->
+    <string name="label_see_recruitment_button">모집글 보기</string>
+    <string name="label_member">팀원</string>
+    <string name="label_member_title">이번 팀플에 이런 성향들이 모였어요!</string>
+    <string name="label_detail_info">상세 정보</string>
+    <string name="label_project_date">프로젝트 기간&#160;&#160;|&#160;&#160;</string>
+    <string name="label_location">활동 지역&#160;&#160;|&#160;&#160;</string>
+    <string name="label_recruiter">모집자</string>
+    <string name="label_go_write_a_review">완료버튼 누르고 후기쓰러 가요!</string>
+    <string name="label_export_member">팀원 내보내기</string>
+    <string name="label_complete_teample">팀플 완료</string>
+    <string name="label_export_member_dialog">함꼐하는 과정중\n그만 둔 팀원이 있나요?</string>
+    <string name="description_export_member_dialog">그만둔 팀원의 완주 수에 표시됩니다.</string>
+    <string name="label_export_button">내보내기</string>
+    <string name="label_cancel_button">취소하기</string>
+    <string name="label_no_export_button">내보내지 않기</string>
+
+    <!-- Member review -->
+    <string name="label_skip_button">건너뛰기</string>
+    <string name="label_cancel_skip_button">건너뛰기 취소</string>
+    <string name="description_horizontal_slide">좌우로 스크롤하여\n다음 또는 이전 팀원으로\n넘어갈 수 있어요!</string>
+    <string name="label_skip_review">이 팀원은 후기를 보내지 않을래요 :(</string>
+    <string name="description_review_tag">팀원의 강점을 1개 이상 추천해주세요!</string>
+    <string name="description_participation">팀원의 참여도는 어땠나요?</string>
+    <string name="description_hope_team_again">재팀원 희망도를 선택해주세요 :)</string>
+    <string name="label_next_member_button">다음 팀원으로</string>
+    <string name="label_submit_review_button">제출하기</string>
 </resources>

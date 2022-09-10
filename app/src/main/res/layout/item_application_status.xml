@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="4dp"
-        android:background="@drawable/bg_white_stroke_gray_12dp">
+        android:background="@drawable/bg_white_stroke_gray_2_12dp">
 
         <TextView
             android:id="@+id/tv_tag"

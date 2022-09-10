@@ -29,7 +29,7 @@
             style="@style/TextAppearance.MaterialComponents.Headline5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/horizontal_margin_home_item_16dp"
+            android:paddingHorizontal="@dimen/padding_16dp"
             android:text="반가워요!\n닉네임님만의 캐릭터가 생겼어요."
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

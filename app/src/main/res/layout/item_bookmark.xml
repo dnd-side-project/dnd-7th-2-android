@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_bookmark_item_172dp"
-        android:background="@drawable/bg_white_stroke_gray_12dp"
+        android:background="@drawable/bg_white_stroke_gray_2_12dp"
         android:paddingHorizontal="@dimen/padding_16dp"
         android:paddingBottom="16dp">
 
@@ -65,14 +65,14 @@
             app:layout_constraintTop_toBottomOf="@id/tv_title">
 
             <com.google.android.material.chip.Chip
-                style="@style/Widget.Teamgoo.Chip"
+                style="@style/Widget.Teamgoo.Chip.Gray.22dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="강의명"
                 tools:text="강의명" />
 
             <com.google.android.material.chip.Chip
-                style="@style/Widget.Teamgoo.Chip"
+                style="@style/Widget.Teamgoo.Chip.Gray.22dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="강의요일과 시간"

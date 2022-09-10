@@ -67,6 +67,12 @@
         <item name="fontFamily">@font/pretendard_medium</item>
     </style>
 
+    <style name="TextAppearance.Teamgoo.Chip.34dp" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/gray_5</item>
+        <item name="android:textSize">14dp</item>
+        <item name="fontFamily">@font/pretendard_medium</item>
+    </style>
+
     <style name="TextAppearance.Teamgoo.Chip.Choice" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="android:textColor">@drawable/selector_chip_text</item>
         <item name="android:textSize">14dp</item>
@@ -88,39 +94,67 @@
         <item name="fontFamily">@font/pretendard_medium</item>
     </style>
 
+    <style name="TextAppearance.Teamgoo.Indicator" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">#F8FBFF</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+    </style>
+
     <style name="Widget.Teamgoo.Button.Purple" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:background">@drawable/btn_purple_16dp</item>
         <item name="android:minHeight">0dp</item>
-        <item name="android:paddingTop">@dimen/vertical_padding_button</item>
-        <item name="android:paddingBottom">@dimen/vertical_padding_button</item>
-        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
-        </item>
-        <item name="fontFamily">@font/pretendard_bold</item>
+        <item name="android:paddingTop">@dimen/vertical_padding_button_16.5dp</item>
+        <item name="android:paddingBottom">@dimen/vertical_padding_button_16.5dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1</item>
         <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/pretendard_bold</item>
+    </style>
+
+    <style name="Widget.Teamgoo.Button.Purple.Sub" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/btn_purple_12dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:paddingTop">@dimen/vertical_padding_button_12dp</item>
+        <item name="android:paddingBottom">@dimen/vertical_padding_button_12dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/petendard_semibold</item>
     </style>
 
     <style name="Widget.Teamgoo.Button.Stroke.Purple" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:background">@drawable/btn_white_stroke_purple_15dp</item>
         <item name="android:minHeight">0dp</item>
-        <item name="android:paddingTop">@dimen/vertical_padding_button</item>
-        <item name="android:paddingBottom">@dimen/vertical_padding_button</item>
-        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
-        </item>
-        <item name="fontFamily">@font/pretendard_bold</item>
+        <item name="android:paddingTop">@dimen/vertical_padding_button_16.5dp</item>
+        <item name="android:paddingBottom">@dimen/vertical_padding_button_16.5dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1</item>
         <item name="android:textColor">@color/primary_purple</item>
+        <item name="fontFamily">@font/pretendard_bold</item>
     </style>
 
     <style name="Widget.Teamgoo.Button.Gray" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:background">@drawable/bg_gray_1_stroke_gray_2_12dp</item>
         <item name="android:minHeight">0dp</item>
-        <item name="android:paddingTop">12dp</item>
-        <item name="android:paddingBottom">12dp</item>
-        <item name="fontFamily">@font/petendard_semibold</item>
+        <item name="android:paddingTop">@dimen/vertical_padding_button_12dp</item>
+        <item name="android:paddingBottom">@dimen/vertical_padding_button_12dp</item>
         <item name="android:textSize">13sp</item>
         <item name="android:textColor">@color/primary_purple</item>
+        <item name="fontFamily">@font/petendard_semibold</item>
     </style>
 
-    <style name="Widget.Teamgoo.Chip" parent="Widget.MaterialComponents.Chip.Action">
+    <style name="Widget.Teamgoo.Chip.26dp" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipStartPadding">2dp</item>
+        <item name="chipEndPadding">4dp</item>
+        <item name="chipMinHeight">26dp</item>
+        <item name="chipCornerRadius">16dp</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStrokeColor">@color/gray_2</item>
+        <item name="chipBackgroundColor">@color/white</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.Teamgoo.Chip</item>
+        <item name="android:textColor">@color/gray_4</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <style name="Widget.Teamgoo.Chip.Gray.22dp" parent="Widget.MaterialComponents.Chip.Action">
         <item name="chipStartPadding">0dp</item>
         <item name="chipEndPadding">2dp</item>
         <item name="chipMinHeight">22dp</item>
@@ -134,15 +168,17 @@
         <item name="android:clickable">false</item>
     </style>
 
-    <style name="Widget.Teamgoo.Chip.Choice" parent="Widget.MaterialComponents.Chip.Choice">
+    <style name="Widget.Teamgoo.Chip.Gray.34dp" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipStartPadding">6dp</item>
+        <item name="chipEndPadding">8dp</item>
         <item name="chipMinHeight">34dp</item>
         <item name="chipCornerRadius">50dp</item>
         <item name="chipStrokeWidth">1dp</item>
-        <item name="chipStrokeColor">@drawable/selector_chip_stroke</item>
-        <item name="chipBackgroundColor">@drawable/selector_chip_background</item>
-        <item name="ensureMinTouchTargetSize">false</item>
-        <item name="android:textAppearance">@style/TextAppearance.Teamgoo.Chip.Choice</item>
-        <item name="android:textColor">@drawable/selector_chip_text</item>
+        <item name="chipMinTouchTargetSize">42dp</item>
+        <item name="chipStrokeColor">@color/gray_2</item>
+        <item name="chipBackgroundColor">@color/gray_1</item>
+        <item name="android:textAppearance">@style/TextAppearance.Teamgoo.Chip.34dp</item>
+        <item name="android:clickable">false</item>
     </style>
 
     <style name="Widget.Teamgoo.Chip.Purple" parent="Widget.MaterialComponents.Chip.Action">
@@ -153,6 +189,17 @@
         <item name="android:textAppearance">@style/TextAppearance.Teamgoo.Chip.Choice</item>
         <item name="android:textColor">@color/primary_purple</item>
         <item name="android:clickable">false</item>
+    </style>
+
+    <style name="Widget.Teamgoo.Chip.Choice" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipMinHeight">34dp</item>
+        <item name="chipCornerRadius">50dp</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStrokeColor">@drawable/selector_chip_stroke</item>
+        <item name="chipBackgroundColor">@drawable/selector_chip_background</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.Teamgoo.Chip.Choice</item>
+        <item name="android:textColor">@drawable/selector_chip_text</item>
     </style>
 
     <style name="Widget.Teamgoo.TextInputLayout.Nickname" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -190,6 +237,16 @@
     <style name="Widget.Teamgoo.BottomSheet.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal">
         <item name="backgroundTint">@android:color/transparent</item>
         <item name="android:background">@drawable/bg_white_top_16dp</item>
+    </style>
+
+    <style name="Widget.Teamgoo.Indicator" parent="Widget.MaterialComponents.TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/circle_gray_3</item>
+        <item name="android:textAppearance">@style/TextAppearance.Teamgoo.Indicator</item>
+    </style>
+
+    <style name="Widget.Teamgoo.RatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
     </style>
 
 </resources>

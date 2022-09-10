@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="firstVote"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_16dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_dialog_20dp"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:text="@string/label_export_member_dialog"
+            android:textAppearance="@style/TextAppearance.Teamgoo.Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_dialog_20dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/pretendard_regular"
+            android:gravity="center"
+            android:text="@string/description_export_member_dialog"
+            android:textColor="@color/gray_5"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_member"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_button_first_vote"
+            exportButtonLayout="@{firstVote}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_dialog_20dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="@dimen/padding_dialog_20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_pager_member">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel_first_vote"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ripple_8dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="@string/label_cancel_button"
+                android:textColor="@color/gray_5"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_export_first_vote"
+                app:layout_constraintEnd_toStartOf="@id/btn_export_first_vote"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_export_first_vote"
+                tools:text="취소하기" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_export_first_vote"
+                style="@style/Widget.Teamgoo.Button.Purple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/label_export_button"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="3"
+                app:layout_constraintStart_toEndOf="@id/btn_cancel_first_vote" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_button"
+            exportButtonLayout="@{!firstVote}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_dialog_20dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="@dimen/padding_dialog_20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_pager_member">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel"
+                style="@style/Widget.Teamgoo.Button.Stroke.Purple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/label_no_export_button"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_export"
+                app:layout_constraintEnd_toStartOf="@id/btn_export"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_export" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_export"
+                style="@style/Widget.Teamgoo.Button.Purple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_export_button"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_cancel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

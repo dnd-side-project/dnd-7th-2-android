@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="tabPosition"
+            type="int" />
+
+        <variable
+            name="myTeample"
+            type="com.dnd.niceteam.ui.mypage.myteample.adapter.MyTeample" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_container"
+        myTeampleContainer="@{tabPosition}"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_my_teample_item_134dp"
+        android:background="@drawable/selector_item_my_teample"
+        android:paddingTop="20dp"
+        android:paddingBottom="2dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="11dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/pretendard_bold"
+            android:maxLines="2"
+            android:text="@{myTeample.name}"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="프로젝트 명 프로젝트 명 프로젝트 명 길면 두줄로 238 제한" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:background="@drawable/bg_light_purple_16dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="@{myTeample.type}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/primary_purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="사이드" />
+
+        <TextView
+            android:id="@+id/tv_project_category"
+            projectCategory="@{myTeample.projectCategory}"
+            teampleType="@{myTeample.type}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/pretendard_medium"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/gray_5"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:text="# 카테고리1  # 카테고리2  # 형태(동아리,대외활동등)" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_lecture"
+            myTeampleLectureLayout="@{myTeample.type}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+            <TextView
+                android:id="@+id/tv_professor_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@{myTeample.professorName}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/gray_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="교수명" />
+
+            <View
+                android:id="@+id/divider_lecture"
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/gray_3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_professor_name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_lecture_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@{myTeample.lectureTime}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/gray_5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/divider_lecture"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="월/수 10:30" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_personnel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/ic_team_light_gray"
+            app:layout_constraintBottom_toTopOf="@+id/btn_write_review"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_personnel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@{myTeample.personnel}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/gray_4"
+            app:layout_constraintBottom_toBottomOf="@id/iv_personnel"
+            app:layout_constraintStart_toEndOf="@id/iv_personnel"
+            app:layout_constraintTop_toTopOf="@id/iv_personnel"
+            tools:text="팀원 4명" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_write_review"
+            style="@style/Widget.Teamgoo.Button.Purple.Sub"
+            myTeampleReviewButton="@{tabPosition}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
+            android:layout_marginBottom="14dp"
+            android:fontFamily="@font/petendard_semibold"
+            android:text="@string/label_write_review_button"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
