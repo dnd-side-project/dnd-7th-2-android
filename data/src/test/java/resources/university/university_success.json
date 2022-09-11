@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "가톨릭대학교",
+      "emailDomain": "test1.com"
+    },
+    {
+      "id": 2,
+      "name": "건국대학교",
+      "emailDomain": "test2.com"
+    },
+    {
+      "id": 3,
+      "name": "경기대학교",
+      "emailDomain": "test3.com"
+    },
+    {
+      "id": 4,
+      "name": "경희대학교",
+      "emailDomain": "test3.com"
+    },
+    {
+      "id": 5,
+      "name": "고려대학교",
+      "emailDomain": "test3.com"
+    },
+    {
+      "id": 6,
+      "name": "광운대학교",
+      "emailDomain": "test3.com"
+    },
+    {
+      "id": 7,
+      "name": "국민대학교",
+      "emailDomain": "test3.com"
+    },
+    {
+      "id": 8,
+      "name": "동국대학교",
+      "emailDomain": "test3.com"
+    }
+  ]
+}
