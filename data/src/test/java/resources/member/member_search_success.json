@@ -1,0 +1,26 @@
+{
+  "success" : true,
+  "data" : {
+    "id" : 1,
+    "nickname" : "테스트닉네임",
+    "personality" : {
+      "adjective" : "LOGICAL",
+      "noun" : "ANALYST"
+    },
+    "departmentName" : "테스트학과",
+    "interestingFields" : [ "IT_SW_GAME", "DESIGN" ],
+    "admissionYear" : 2017,
+    "introduction" : "테스트자기소개",
+    "introductionUrl" : "test.com",
+    "level" : 1,
+    "participationPct" : 100.0,
+    "reviewTagToNums" : {
+      "RESPONSIBILITY" : 0,
+      "TIME_MANNERS" : 0,
+      "DEAD_LINE" : 0,
+      "MOOD_MAKER" : 0
+    },
+    "numTotalEndProject" : 0,
+    "numCompleteProject" : 0
+  }
+}
