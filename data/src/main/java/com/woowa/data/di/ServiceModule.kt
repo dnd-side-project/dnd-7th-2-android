@@ -2,6 +2,8 @@ package com.woowa.data.di
 
 import com.woowa.data.remote.service.AuthenticationService
 import com.woowa.data.remote.service.EmailAuthenticationService
+import com.woowa.data.remote.service.UniversityService
+
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,7 +18,13 @@ internal object ServiceModule {
     @Provides
     @Singleton
     fun provideAuthenticationService(retrofit: Retrofit): AuthenticationService {
-        return retrofit.create(com.woowa.data.remote.service.AuthenticationService::class.java)
+        return retrofit.create(AuthenticationService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideUniversityService(retrofit: Retrofit): UniversityService {
+        return retrofit.create(UniversityService::class.java)
     }
 
     @Provides
