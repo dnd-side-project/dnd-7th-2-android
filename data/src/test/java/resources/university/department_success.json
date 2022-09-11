@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "collegeName": "공과대학",
+      "name": "컴퓨터공학과"
+    },
+    {
+      "id": 2,
+      "collegeName": "공과대학",
+      "name": "전자공학과"
+    },
+    {
+      "id": 3,
+      "collegeName": "공과대학",
+      "name": "전기공학과"
+    },
+    {
+      "id": 4,
+      "collegeName": "공과대학",
+      "name": "컴퓨터소프트웨어공학과"
+    },
+    {
+      "id": 5,
+      "collegeName": "공과대학",
+      "name": "정보통신공학과"
+    }
+  ]
+}
