@@ -1,0 +1,137 @@
+{
+  "success" : true,
+  "data" : {
+    "DayOfWeek" : [ {
+      "code" : "MON",
+      "title" : "월"
+    }, {
+      "code" : "TUE",
+      "title" : "화"
+    }, {
+      "code" : "WED",
+      "title" : "수"
+    }, {
+      "code" : "THUR",
+      "title" : "목"
+    }, {
+      "code" : "FRI",
+      "title" : "금"
+    }, {
+      "code" : "SAT",
+      "title" : "토"
+    }, {
+      "code" : "SUN",
+      "title" : "일"
+    } ],
+    "Field" : [ {
+      "code" : "AD_MARKETING",
+      "title" : "광고/마케팅"
+    }, {
+      "code" : "PLANNING_IDEA",
+      "title" : "기획/아이디어"
+    }, {
+      "code" : "DESIGN",
+      "title" : "디자인"
+    }, {
+      "code" : "IT_SW_GAME",
+      "title" : "IT/소프트웨어/게임"
+    }, {
+      "code" : "MEDIA",
+      "title" : "미디어"
+    }, {
+      "code" : "ART_MUSIC_PHYSICAL",
+      "title" : "예체능"
+    }, {
+      "code" : "LANGUAGE",
+      "title" : "어학"
+    }, {
+      "code" : "FINANCE_ACCOUNTING",
+      "title" : "금융/회계"
+    }, {
+      "code" : "ETC",
+      "title" : "기타"
+    } ],
+    "FieldCategory" : [ {
+      "code" : "CONTEST",
+      "title" : "공모전"
+    }, {
+      "code" : "EXTRA_ACTIVITY",
+      "title" : "대외활동"
+    }, {
+      "code" : "STUDY",
+      "title" : "스터디"
+    }, {
+      "code" : "CLUB",
+      "title" : "동아리"
+    } ],
+    "PersonalityAdjective" : [ {
+      "code" : "LOGICAL",
+      "title" : "논리적인"
+    }, {
+      "code" : "PRECISE",
+      "title" : "꼼꼼한"
+    }, {
+      "code" : "PLANNED",
+      "title" : "계획적인"
+    }, {
+      "code" : "QUICK_WORKING",
+      "title" : "일처리가 빠른"
+    }, {
+      "code" : "CHEERFUL",
+      "title" : "쾌활한"
+    }, {
+      "code" : "CREATIVE",
+      "title" : "창의적인"
+    }, {
+      "code" : "SINCERE",
+      "title" : "성실한"
+    }, {
+      "code" : "GOAL_ORIENTED",
+      "title" : "목표지향적인"
+    }, {
+      "code" : "PERSISTENT",
+      "title" : "끈기있는"
+    } ],
+    "PersonalityNoun" : [ {
+      "code" : "INVENTOR",
+      "title" : "발명가"
+    }, {
+      "code" : "LEADER",
+      "title" : "리더"
+    }, {
+      "code" : "FOLLOWER",
+      "title" : "팔로워"
+    }, {
+      "code" : "PERFECTIONIST",
+      "title" : "완벽주의자"
+    }, {
+      "code" : "COMMUNICATOR",
+      "title" : "커뮤니케이터"
+    }, {
+      "code" : "ADVENTURER",
+      "title" : "모험가"
+    }, {
+      "code" : "ANALYST",
+      "title" : "분석가"
+    }, {
+      "code" : "MEDIATOR",
+      "title" : "중재자"
+    }, {
+      "code" : "JACK_OF_ALL_TRADES",
+      "title" : "만능재주꾼"
+    } ],
+    "ReviewTag" : [ {
+      "code" : "RESPONSIBILITY",
+      "title" : "책임감 굿"
+    }, {
+      "code" : "DEAD_LINE",
+      "title" : "마감을 칼같이"
+    }, {
+      "code" : "MOOD_MAKER",
+      "title" : "분위기 메이커"
+    }, {
+      "code" : "TIME_MANNERS",
+      "title" : "시간매너 끝판왕"
+    } ]
+  }
+}

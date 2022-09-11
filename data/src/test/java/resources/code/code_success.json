@@ -1,0 +1,18 @@
+{
+  "success" : true,
+  "data" : {
+    "ReviewTag" : [ {
+      "code" : "RESPONSIBILITY",
+      "title" : "책임감 굿"
+    }, {
+      "code" : "DEAD_LINE",
+      "title" : "마감을 칼같이"
+    }, {
+      "code" : "MOOD_MAKER",
+      "title" : "분위기 메이커"
+    }, {
+      "code" : "TIME_MANNERS",
+      "title" : "시간매너 끝판왕"
+    } ]
+  }
+}
