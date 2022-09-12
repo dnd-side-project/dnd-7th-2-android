@@ -4,9 +4,9 @@ import com.google.common.truth.Truth.assertThat
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import com.woowa.data.remote.model.response.ErrorResponse
-import com.woowa.domain.model.Member
-import com.woowa.domain.model.MemberEdit
-import com.woowa.domain.model.Personality
+import com.woowa.domain.model.member.Member
+import com.woowa.domain.model.member.MemberEdit
+import com.woowa.domain.model.member.Personality
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import mockwebserver3.MockResponse

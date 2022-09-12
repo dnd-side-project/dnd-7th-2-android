@@ -1,7 +1,7 @@
-package com.woowa.data.remote.model.response
+package com.woowa.data.remote.model.response.member
 
-import com.woowa.domain.model.Member
-import com.woowa.domain.model.Personality
+import com.woowa.domain.model.member.Member
+import com.woowa.domain.model.member.Personality
 
 internal data class MemberDto(
     val id: Int,
