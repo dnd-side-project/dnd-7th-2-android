@@ -41,6 +41,7 @@ android {
 
 dependencies {
     implementation(project(":domain"))
+    implementation(project(":data"))
 
     implementation(Library.Coroutine.COROUTINE)
     implementation(Library.AndroidX.CORE_KTX)
