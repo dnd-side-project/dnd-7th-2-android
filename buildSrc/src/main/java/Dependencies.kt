@@ -11,6 +11,7 @@ object Version {
     const val FRAGMENT_KTX = "1.5.0"
     const val TEST_JUNIT = "1.1.3"
     const val ESPRESSO = "3.4.0"
+    const val PAGING3 = "3.1.1"
 
     const val JUNIT = "4.13.2"
 
@@ -41,6 +42,8 @@ object Library {
         const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:${Version.FRAGMENT_KTX}"
         const val TEST_JUNIT = "androidx.test.ext:junit:${Version.TEST_JUNIT}"
         const val ESPRESSO = "androidx.test.espresso:espresso-core:${Version.ESPRESSO}"
+        const val PAGING3 = "androidx.paging:paging-runtime-ktx:${Version.PAGING3}"
+        const val PAGING3_COMMON = "androidx.paging:paging-common:${Version.PAGING3}"
     }
 
     object Junit {

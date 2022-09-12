@@ -16,6 +16,9 @@ tasks.test {
 
 dependencies {
     implementation(project(":domain"))
+
+    implementation(Library.AndroidX.PAGING3_COMMON)
+
     implementation(Library.Network.RETROFIT)
     implementation(Library.Network.MOSHI)
     implementation(Library.Network.MOSHI_KOTLIN)
