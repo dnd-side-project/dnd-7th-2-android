@@ -2,6 +2,9 @@ package com.woowa.data.remote.repository
 
 import com.woowa.data.remote.soruce.MemberDataSource
 import com.woowa.domain.model.*
+import com.woowa.domain.model.member.Member
+import com.woowa.domain.model.member.MemberEdit
+import com.woowa.domain.model.member.MemberUpdate
 import com.woowa.domain.repository.MemberRepository
 import javax.inject.Inject
 

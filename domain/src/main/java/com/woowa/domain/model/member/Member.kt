@@ -1,4 +1,4 @@
-package com.woowa.domain.model
+package com.woowa.domain.model.member
 
 data class Member(
     val id: Int,

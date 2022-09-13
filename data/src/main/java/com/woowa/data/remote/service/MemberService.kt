@@ -1,9 +1,9 @@
 package com.woowa.data.remote.service
 
 import com.woowa.data.remote.model.response.ApiResponse
-import com.woowa.data.remote.model.response.MemberDto
-import com.woowa.data.remote.model.response.MemberUpdateDto
-import com.woowa.domain.model.MemberEdit
+import com.woowa.data.remote.model.response.member.MemberDto
+import com.woowa.data.remote.model.response.member.MemberUpdateDto
+import com.woowa.domain.model.member.MemberEdit
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.PUT

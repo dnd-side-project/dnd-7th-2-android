@@ -11,6 +11,11 @@ java {
 }
 
 dependencies {
+    implementation(Library.AndroidX.PAGING3_COMMON)
+
+    implementation(Library.Coroutine.CORE)
+    implementation(Library.Coroutine.TEST)
+
     implementation(Library.Hilt.CORE)
     kapt(Library.Hilt.COMPILER)
 }
