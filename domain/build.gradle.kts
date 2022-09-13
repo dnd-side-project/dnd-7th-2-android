@@ -17,5 +17,6 @@ dependencies {
     implementation(Library.Coroutine.TEST)
 
     implementation(Library.Hilt.CORE)
+    implementation(Library.AndroidX.PAGING3_COMMON)
     kapt(Library.Hilt.COMPILER)
 }
