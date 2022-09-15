@@ -1,5 +1,9 @@
 package com.woowa.data.remote.model.response.member
 
+import com.woowa.domain.model.code.Field
+import com.woowa.domain.model.code.PersonalityAdjective
+import com.woowa.domain.model.code.PersonalityNoun
+import com.woowa.domain.model.code.ReviewTag
 import com.woowa.domain.model.member.Member
 import com.woowa.domain.model.member.Personality
 
@@ -8,13 +12,13 @@ internal data class MemberDto(
     val nickname: String,
     val personality: PersonalityDto,
     val departmentName: String,
-    val interestingFields: List<String>,
+    val interestingFields: List<Field>,
     val admissionYear: Int,
     val introduction: String,
     val introductionUrl: String,
     val level: Int,
     val participationPct: Double,
-    val reviewTagToNums: Map<String, Int>,
+    val reviewTagToNums: Map<ReviewTag, Int>,
     val numTotalEndProject: Int,
     val numCompleteProject: Int
 ) {
@@ -24,37 +28,25 @@ internal data class MemberDto(
             nickname,
             personality.toPersonality(),
             departmentName,
-            interestingFields,
+            interestingFields.map { it.title },
             admissionYear,
             introduction,
             introductionUrl,
             level,
             participationPct,
-            reviewTagToNums,
+            reviewTagToNums.mapKeys { it.key.title },
             numTotalEndProject,
             numCompleteProject
         )
 }
 
 internal data class PersonalityDto(
-    val adjective: String,
-    val noun: String
+    val adjective: PersonalityAdjective,
+    val noun: PersonalityNoun
 ) {
-    fun toPersonality(): Personality = Personality(adjective, noun)
+    fun toPersonality(): Personality = Personality(adjective.title, noun.title)
 }
 
-/**
- * ReviewTag
- * RESPONSIBILITY : 책임감 굿
- * PUNCTUALITY :    마감을 칼같이
- * MOOD_MAKER :     분위기 메이커
- * TIME_MANNERS :   시간매너 끝판왕
- * POSITIVE :       긍정 태도왕
- * IDEA :           아이디어 요정
- * FEEDBACK :       활발한 피드백
- * DECISIVE :       속전속결 피드백
- * LIKE_MINE :      남의 일도 내 일같이
- */
 //@JsonClass(generateAdapter = true)
 //data class MemberDto(
 //    @field:Json(name = "id") val id: Int,
