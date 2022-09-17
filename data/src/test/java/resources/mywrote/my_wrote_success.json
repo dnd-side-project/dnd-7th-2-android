@@ -18,6 +18,18 @@
         "projectName": "test-lecture-project-name",
         "professor": "test-professor-name",
         "createdDate": "2022-08-21T13:00:00"
+      },
+      {
+        "id": 2,
+        "title": "모집글 제목 테스트2",
+        "type": "SIDE",
+        "status": "IN_PROGRESS",
+        "commentCount": 0,
+        "bookmarkCount": 0,
+        "projectName": "test-lecture-project-name2",
+        "field": "IT_SW_GAME",
+        "fieldCategory": "STUDY",
+        "createdDate": "2022-09-14T19:00:00"
       }
     ]
   }

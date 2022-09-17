@@ -1,5 +1,7 @@
 package com.woowa.domain.model.mywrote
 
+import com.woowa.domain.model.code.Type
+
 data class MyWrote(
     val page: Int,
     val perSize: Int,
@@ -13,7 +15,7 @@ data class MyWrote(
 data class MyWroteContents(
     val id: Int,
     val title: String,
-    val type: String,
+    val type: Type,
     val status: String,
     val commentCount: Int,
     val bookmarkCount: Int,

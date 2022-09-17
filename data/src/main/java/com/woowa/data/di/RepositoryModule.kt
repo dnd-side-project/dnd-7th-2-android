@@ -1,12 +1,6 @@
 package com.woowa.data.di
 
 import com.woowa.data.remote.repository.*
-import com.woowa.data.remote.repository.AuthenticationRepositoryImpl
-import com.woowa.data.remote.repository.CodeRepositoryImpl
-import com.woowa.data.remote.repository.EmailAuthenticationRepositoryImpl
-import com.woowa.data.remote.repository.MemberRepositoryImpl
-import com.woowa.data.remote.repository.MyWroteRepositoryImpl
-import com.woowa.data.remote.repository.UniversityRepositoryImpl
 import com.woowa.domain.repository.*
 import dagger.Binds
 import dagger.Module
@@ -29,7 +23,7 @@ internal interface RepositoryModule {
     @Binds
     @Singleton
     fun provideMember(memberRepositoryImpl: MemberRepositoryImpl): MemberRepository
-    
+
     @Binds
     @Singleton
     fun provideUniversity(universityRepositoryImpl: UniversityRepositoryImpl): UniversityRepository
@@ -41,4 +35,8 @@ internal interface RepositoryModule {
     @Binds
     @Singleton
     fun provideMyWrote(myWroteRepositoryImpl: MyWroteRepositoryImpl): MyWroteRepository
+
+    @Binds
+    @Singleton
+    fun provideApplicant(applicantRepositoryImpl: ApplicantRepositoryImpl): ApplicantRepository
 }

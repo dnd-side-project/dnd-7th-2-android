@@ -1,6 +1,8 @@
 package com.woowa.data.remote.model.response.mywrote
 
-import com.woowa.data.remote.model.response.CodeEnumDto
+import com.woowa.domain.model.code.Field
+import com.woowa.domain.model.code.FieldCategory
+import com.woowa.domain.model.code.Type
 import com.woowa.domain.model.mywrote.MyWrote
 import com.woowa.domain.model.mywrote.MyWroteContents
 
@@ -28,14 +30,14 @@ internal data class MyWroteDto(
 internal data class MyWroteContentsDto(
     val id: Int,
     val title: String,
-    val type: String,
+    val type: Type,
     val status: String,
     val commentCount: Int,
     val bookmarkCount: Int,
     val projectName: String,
     val professor: String? = null,
-    val field: CodeEnumDto? = null,
-    val fieldCategory: CodeEnumDto? = null,
+    val field: Field? = null,
+    val fieldCategory: FieldCategory? = null,
     val createdDate: String
 ) {
     fun toMyWroteContents(): MyWroteContents =
